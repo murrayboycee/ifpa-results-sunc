@@ -81,17 +81,12 @@ function tokens(s) {
     .filter(Boolean);
 }
 
-// Two tokens are considered a match if identical, or if one is a prefix of
-// the other (handles Seas/Season, Tues/Tuesday, etc.) — except numbers,
-// which must match exactly since they usually carry the most meaning
-// (season number, year).
 function tokenMatches(a, b) {
   if (a === b) return true;
   if (/^\d+$/.test(a) || /^\d+$/.test(b)) return false;
   return a.length >= 3 && b.length >= 3 && (a.indexOf(b) === 0 || b.indexOf(a) === 0);
 }
 
-// Fraction of the IFPA event's name-words found (loosely) in a candidate's name.
 function nameScore(targetTokens, candidateTokens) {
   if (targetTokens.length === 0) return 0;
   var matched = 0;
@@ -103,8 +98,6 @@ function nameScore(targetTokens, candidateTokens) {
   return matched / targetTokens.length;
 }
 
-// Among several same-name candidates (e.g. many "Flip Frenzy" entries),
-// pick whichever has the closest date to the IFPA event's date.
 function closestByDate(candidates, targetDate) {
   if (candidates.length === 0) return null;
   if (candidates.length === 1) return candidates[0];
@@ -136,43 +129,31 @@ async function fetchAllMatchplayTournaments() {
   return all;
 }
 
-// Elimination/knockout bracket formats (finals stages), as opposed to
-// qualifying formats like group_matchplay, max_matchplay, best_game, etc.
 var ELIMINATION_TYPE_REGEX = /elimination|knockout/i;
 var FINALS_NAME_REGEX = /\bfinal(s)?\b|\btop\s*\d+\b|\bplayoff(s)?\b/i;
 
 function findMatchplayLink(ifpaEvent, matchplayTournaments) {
   var targetTokens = tokens(ifpaEvent.name);
 
-  // Exclude test/template tournaments — these show up in the owner's list
-  // but were never actually played and shouldn't be matched to real events.
   var realTournaments = matchplayTournaments.filter(function (mt) {
     return !mt.test && !/template/i.test(mt.name || "");
   });
 
-  // Require most (70%+) of the IFPA name's meaningful words to appear in
-  // the Match Play tournament's name, tolerant of abbreviations.
   var candidates = realTournaments.filter(function (mt) {
     return nameScore(targetTokens, tokens(mt.name)) >= 0.7;
   });
 
-  // For events that run as qualifying + separate finals bracket (Pinawarra,
-  // Flip Frenzy), prefer the qualifier over the finals/top-8/top-16 stage —
-  // only fall back to a finals-stage match if no qualifier candidate exists.
   var qualifierCandidates = candidates.filter(function (mt) {
     return !ELIMINATION_TYPE_REGEX.test(mt.type || "") && !FINALS_NAME_REGEX.test(mt.name || "");
   });
   var pool = qualifierCandidates.length > 0 ? qualifierCandidates : candidates;
 
-  // If nothing matched by name, don't guess by date alone across all 800+
-  // tournaments — leaving it blank (falls back to the profile link) is
-  // safer than risking a link to the wrong event.
   var best = closestByDate(pool, ifpaEvent.date);
   if (!best || !best.tournamentId) return "";
 
-  // Monday leagues: link the whole series (season) instead of one week's
-  // tournament, if this tournament belongs to a series.
-  if (ifpaEvent.category === "monday" && best.seriesId) {
+  // Monday/Tuesday leagues: link the whole series (season) instead of one
+  // week's tournament, if this tournament belongs to a series.
+  if ((ifpaEvent.category === "monday" || ifpaEvent.category === "tuesday") && best.seriesId) {
     return `${MATCHPLAY_BASE}/series/${best.seriesId}`;
   }
 
