@@ -168,6 +168,13 @@ function findMatchplayLink(ifpaEvent, matchplayTournaments) {
 
   var best = closestByDate(pool, ifpaEvent.date);
   if (!best || !best.tournamentId) return "";
+
+  // Monday/Tuesday leagues: link the whole series (season) instead of one
+  // week's tournament, since the league spans many weeks under one series.
+  if ((ifpaEvent.category === "monday" || ifpaEvent.category === "tuesday") && best.seriesId) {
+    return `${MATCHPLAY_BASE}/series/${best.seriesId}`;
+  }
+
   return `${MATCHPLAY_BASE}/tournaments/${best.tournamentId}`;
 }
 
@@ -200,17 +207,18 @@ async function main() {
 
     const eventName = t.tournament_name || t.event_name;
     const eventDate = toIsoDate(pickDisplayDate(t));
+    const eventCategory = classify(eventName || "");
 
     events.push({
       name: eventName,
-      category: classify(eventName || ""),
+      category: eventCategory,
       year: new Date(pickDisplayDate(t)).getFullYear(),
       date: eventDate,
       players: Number(t.player_count) || 0,
       winner,
       points,
       ifpaLink: `https://www.ifpapinball.com/tournaments/view.php?t=${id}`,
-      matchplayLink: findMatchplayLink({ name: eventName, date: eventDate }, matchplayTournaments)
+      matchplayLink: findMatchplayLink({ name: eventName, date: eventDate, category: eventCategory }, matchplayTournaments)
     });
 
     await new Promise((r) => setTimeout(r, 150));
