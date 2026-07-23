@@ -13,11 +13,13 @@
 //        results[] is sorted by position ascending, so results[0] is the winner.
 //        "points" and "position" are returned as strings — cast to number.
 //
-// Match Play field mapping (from docs.matchplay.events/tournaments-api):
+// Match Play field mapping (confirmed from a real API response, 2026-07):
 //   GET /api/tournaments?owner={id}&limit=100&page=N
-//     -> paginated list of tournaments owned by this user. Exact field names
-//        for name/date/id are unconfirmed — MATCHPLAY_DEBUG below prints the
-//        raw response once so we can confirm/adjust in one pass if needed.
+//     -> { data: [{ tournamentId, name, status, startUtc, startLocal,
+//                    endUtc, endLocal, test, organizerId, ... }] }
+//        "test": true marks template/practice tournaments that were never
+//        actually played — these must be excluded from matching.
+//        startLocal is "YYYY-MM-DD HH:MM:SS" — first 10 chars give the date.
 
 const fs = require("fs");
 
@@ -27,7 +29,6 @@ const DIRECTOR_ID = 2909;
 const MATCHPLAY_OWNER_ID = 25018;
 const IFPA_BASE = "https://api.ifpapinball.com";
 const MATCHPLAY_BASE = "https://app.matchplay.events";
-const MATCHPLAY_DEBUG = true; // set to false once field mapping is confirmed
 
 if (!IFPA_API_KEY) {
   console.error("Missing IFPA_API_KEY environment variable.");
@@ -78,18 +79,9 @@ async function fetchAllMatchplayTournaments() {
   if (!MATCHPLAY_API_TOKEN) return [];
   var all = [];
   var page = 1;
-  var debugged = false;
   while (true) {
     var data = await matchplayGet(`/api/tournaments?owner=${MATCHPLAY_OWNER_ID}&limit=100&page=${page}`);
-
-    if (MATCHPLAY_DEBUG && !debugged) {
-      console.log("---- RAW MATCH PLAY RESPONSE (page 1, for field-mapping check) ----");
-      console.log(JSON.stringify(data, null, 2).slice(0, 2000));
-      console.log("---- end raw response ----");
-      debugged = true;
-    }
-
-    var pageItems = data.tournaments || data.results || data.data || (Array.isArray(data) ? data : []);
+    var pageItems = data.data || [];
     if (!Array.isArray(pageItems) || pageItems.length === 0) break;
     all = all.concat(pageItems);
     if (pageItems.length < 100) break;
@@ -104,20 +96,24 @@ function findMatchplayLink(ifpaEvent, matchplayTournaments) {
   var targetName = normalizeName(ifpaEvent.name);
   var targetDate = ifpaEvent.date;
 
-  var candidates = matchplayTournaments.filter(function (mt) {
-    var mtName = normalizeName(mt.name || mt.title || "");
+  var realTournaments = matchplayTournaments.filter(function (mt) {
+    return !mt.test && !/template/i.test(mt.name || "");
+  });
+
+  var candidates = realTournaments.filter(function (mt) {
+    var mtName = normalizeName(mt.name || "");
     return mtName === targetName || mtName.includes(targetName) || targetName.includes(mtName);
   });
 
-  var pool = candidates.length > 0 ? candidates : matchplayTournaments;
+  var pool = candidates.length > 0 ? candidates : realTournaments;
   var dateMatches = pool.filter(function (mt) {
-    var mtDate = toIsoDate(mt.startDate || mt.date || mt.scheduledStart || "");
+    var mtDate = toIsoDate(mt.startLocal || mt.startUtc || "");
     return mtDate === targetDate;
   });
 
   var best = (dateMatches.length === 1 ? dateMatches[0] : candidates[0]) || null;
-  if (!best || !best.id) return "";
-  return `${MATCHPLAY_BASE}/tournaments/${best.id}`;
+  if (!best || !best.tournamentId) return "";
+  return `${MATCHPLAY_BASE}/tournaments/${best.tournamentId}`;
 }
 
 async function main() {
