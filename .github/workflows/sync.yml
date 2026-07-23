@@ -1,9 +1,8 @@
-yaml
 name: Sync IFPA Results
 
 on:
   schedule:
-    - cron: "0 18 * * *"
+    - cron: '0 18 * * *'
   workflow_dispatch:
 
 permissions:
@@ -19,7 +18,7 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: '20'
 
       - name: Run sync script
         env:
