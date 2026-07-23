@@ -70,9 +70,53 @@ function pickDisplayDate(t) {
   return t.event_end_date || t.event_start_date;
 }
 
-// Loose normalization for name matching: lowercase, strip non-alphanumerics.
-function normalizeName(s) {
-  return (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+// Word-based name matching, tolerant of abbreviations IFPA/Match Play use
+// inconsistently (e.g. IFPA writes "Seas 4", Match Play writes "Season 4").
+function tokens(s) {
+  return (s || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean);
+}
+
+// Two tokens are considered a match if identical, or if one is a prefix of
+// the other (handles Seas/Season, Tues/Tuesday, etc.) — except numbers,
+// which must match exactly since they usually carry the most meaning
+// (season number, year).
+function tokenMatches(a, b) {
+  if (a === b) return true;
+  if (/^\d+$/.test(a) || /^\d+$/.test(b)) return false;
+  return a.length >= 3 && b.length >= 3 && (a.indexOf(b) === 0 || b.indexOf(a) === 0);
+}
+
+// Fraction of the IFPA event's name-words found (loosely) in a candidate's name.
+function nameScore(targetTokens, candidateTokens) {
+  if (targetTokens.length === 0) return 0;
+  var matched = 0;
+  targetTokens.forEach(function (t) {
+    if (candidateTokens.indexOf(t) !== -1 || candidateTokens.some(function (c) { return tokenMatches(t, c); })) {
+      matched++;
+    }
+  });
+  return matched / targetTokens.length;
+}
+
+// Among several same-name candidates (e.g. many "Flip Frenzy" entries),
+// pick whichever has the closest date to the IFPA event's date.
+function closestByDate(candidates, targetDate) {
+  if (candidates.length === 0) return null;
+  if (candidates.length === 1) return candidates[0];
+  var targetTime = new Date(targetDate).getTime();
+  var ranked = candidates
+    .map(function (mt) {
+      var d = toIsoDate(mt.startLocal || mt.startUtc || "");
+      var diff = d ? Math.abs(new Date(d).getTime() - targetTime) : Infinity;
+      return { mt: mt, diff: diff };
+    })
+    .sort(function (a, b) { return a.diff - b.diff; });
+  return ranked[0].mt;
 }
 
 async function fetchAllMatchplayTournaments() {
@@ -93,25 +137,24 @@ async function fetchAllMatchplayTournaments() {
 }
 
 function findMatchplayLink(ifpaEvent, matchplayTournaments) {
-  var targetName = normalizeName(ifpaEvent.name);
-  var targetDate = ifpaEvent.date;
+  var targetTokens = tokens(ifpaEvent.name);
 
+  // Exclude test/template tournaments — these show up in the owner's list
+  // but were never actually played and shouldn't be matched to real events.
   var realTournaments = matchplayTournaments.filter(function (mt) {
     return !mt.test && !/template/i.test(mt.name || "");
   });
 
+  // Require most (70%+) of the IFPA name's meaningful words to appear in
+  // the Match Play tournament's name, tolerant of abbreviations.
   var candidates = realTournaments.filter(function (mt) {
-    var mtName = normalizeName(mt.name || "");
-    return mtName === targetName || mtName.includes(targetName) || targetName.includes(mtName);
+    return nameScore(targetTokens, tokens(mt.name)) >= 0.7;
   });
 
-  var pool = candidates.length > 0 ? candidates : realTournaments;
-  var dateMatches = pool.filter(function (mt) {
-    var mtDate = toIsoDate(mt.startLocal || mt.startUtc || "");
-    return mtDate === targetDate;
-  });
-
-  var best = (dateMatches.length === 1 ? dateMatches[0] : candidates[0]) || null;
+  // If nothing matched by name, don't guess by date alone across all 800+
+  // tournaments — leaving it blank (falls back to the profile link) is
+  // safer than risking a link to the wrong event.
+  var best = closestByDate(candidates, ifpaEvent.date);
   if (!best || !best.tournamentId) return "";
   return `${MATCHPLAY_BASE}/tournaments/${best.tournamentId}`;
 }
