@@ -136,14 +136,18 @@ function findMatchplayLink(ifpaEvent, matchplayTournaments) {
     return !mt.test && !/template/i.test(mt.name || "");
   });
 
-  // If the IFPA name names a specific day of the week (Monday League vs
-  // Tuesday League run in parallel with near-identical names otherwise),
-  // require an EXACT match on that word first — a fuzzy score alone lets
-  // a wrong-day tournament through when 5 of 6 words still line up.
   var targetWeekday = targetTokens.filter(function (t) { return WEEKDAYS.indexOf(t) !== -1; })[0];
   if (targetWeekday) {
     realTournaments = realTournaments.filter(function (mt) {
       return tokens(mt.name).indexOf(targetWeekday) !== -1;
+    });
+  }
+
+  var targetNumbers = targetTokens.filter(function (t) { return /^\d+$/.test(t); });
+  if (targetNumbers.length > 0) {
+    realTournaments = realTournaments.filter(function (mt) {
+      var mtTokens = tokens(mt.name);
+      return targetNumbers.every(function (n) { return mtTokens.indexOf(n) !== -1; });
     });
   }
 
