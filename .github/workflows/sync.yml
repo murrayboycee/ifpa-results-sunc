@@ -1,81 +1,35 @@
-// scripts/sync.js
-//
-// Pulls this director's tournament list + results from the real IFPA API
-// and writes events.json for the Squarespace widget to fetch().
-//
-// Confirmed field mapping (from a real API response, 2026-07):
-//   GET /director/{id}/tournaments/PAST?api_key=...
-//     -> { tournaments: [{ tournament_id, tournament_name, event_name,
-//                           event_start_date, player_count, ... }] }
-//   GET /tournament/{id}/results?api_key=...
-//     -> { tournament_id, results: [{ name, position, points, ... }] }
-//        results[] is sorted by position ascending, so results[0] is the winner.
-//        "points" and "position" are returned as strings — cast to number.
+name: Sync IFPA Results
 
-const fs = require("fs");
+on:
+  schedule:
+    - cron: "0 18 * * *"
+  workflow_dispatch:
 
-const API_KEY = process.env.IFPA_API_KEY;
-const DIRECTOR_ID = 2909;
-const BASE = "https://api.ifpapinball.com";
+permissions:
+  contents: write
 
-if (!API_KEY) {
-  console.error("Missing IFPA_API_KEY environment variable.");
-  process.exit(1);
-}
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-async function apiGet(path) {
-  const url = `${BASE}${path}${path.includes("?") ? "&" : "?"}api_key=${API_KEY}`;
-  const res = await fetch(url);
-  if (!res.ok) {
-    throw new Error(`${path} -> HTTP ${res.status}`);
-  }
-  return res.json();
-}
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
-function classify(name) {
-  const n = name.toLowerCase();
-  if (n.includes("frenzy")) return "flipfrenzy";
-  if (n.includes("monday")) return "monday";
-  if (n.includes("tuesday")) return "tuesday";
-  if (n.startsWith("pinawarra")) return "pinawarra";
-  return "other";
-}
+      - name: Run sync script
+        env:
+          IFPA_API_KEY: ${{ secrets.IFPA_API_KEY }}
+        run: node scripts/sync.js
 
-function toIsoDate(dateStr) {
-  return dateStr ? dateStr.slice(0, 10) : "";
-}
-
-async function main() {
-  console.log(`Fetching tournament list for director ${DIRECTOR_ID}...`);
-  const dirData = await apiGet(`/director/${DIRECTOR_ID}/tournaments/PAST`);
-  const tournaments = dirData.tournaments || [];
-  console.log(`Found ${tournaments.length} past tournaments.`);
-
-  const events = [];
-
-  for (const t of tournaments) {
-    const id = t.tournament_id;
-    let winner = "";
-    let points = 0;
-
-    try {
-      const resultsData = await apiGet(`/tournament/${id}/results`);
-      const results = resultsData.results || [];
-      const first = Array.isArray(results) ? results[0] : null;
-
-      if (first) {
-        winner = (first.name || "").trim();
-        points = parseFloat(first.points) || 0;
-      }
-    } catch (err) {
-      console.warn(`  Could not fetch results for tournament ${id}: ${err.message}`);
-    }
-
-    events.push({
-      name: t.tournament_name || t.event_name,
-      category: classify(t.tournament_name || ""),
-      year: new Date(t.event_start_date).getFullYear(),
-      date: toIsoDate(t.event_start_date),
-      players: t.player_count || 0,
-      winner,
-      points,
+      - name: Commit updated events.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add events.json
+          git diff --staged --quiet || git commit -m "Update IFPA event data"
+          git pull --rebase origin main
+          git push
