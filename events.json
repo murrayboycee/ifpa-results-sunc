@@ -1,1784 +1,227 @@
-[
-  {
-    "name": "Illawarra Tuesday League Seas 4 2026",
-    "category": "tuesday",
-    "year": 2026,
-    "date": "2026-07-21",
-    "players": 20,
-    "winner": "Ron Lengling",
-    "points": 18.78,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=115846",
-    "matchplayLink": "https://app.matchplay.events/tournaments/258578"
-  },
-  {
-    "name": "Illawarra Monday League Seas 4 2026",
-    "category": "monday",
-    "year": 2026,
-    "date": "2026-07-20",
-    "players": 27,
-    "winner": "Stuart Hunt",
-    "points": 27.44,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=115845",
-    "matchplayLink": "https://app.matchplay.events/tournaments/258581"
-  },
-  {
-    "name": "Flip Frenzy 160726",
-    "category": "flipfrenzy",
-    "year": 2026,
-    "date": "2026-07-16",
-    "players": 12,
-    "winner": "Murray Boyce",
-    "points": 4.92,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=116327",
-    "matchplayLink": ""
-  },
-  {
-    "name": "Pinawarra 38",
-    "category": "pinawarra",
-    "year": 2026,
-    "date": "2026-07-11",
-    "players": 22,
-    "winner": "Jayson Walsh",
-    "points": 20.9,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=112850",
-    "matchplayLink": "https://app.matchplay.events/tournaments/259953"
-  },
-  {
-    "name": "Flip Frenzy 050726",
-    "category": "flipfrenzy",
-    "year": 2026,
-    "date": "2026-07-05",
-    "players": 13,
-    "winner": "Paul Soutter",
-    "points": 5.67,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=116326",
-    "matchplayLink": ""
-  },
-  {
-    "name": "Flip Frenzy 020726",
-    "category": "flipfrenzy",
-    "year": 2026,
-    "date": "2026-07-02",
-    "players": 15,
-    "winner": "Paul Soutter",
-    "points": 3.6,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=116324",
-    "matchplayLink": ""
-  },
-  {
-    "name": "Iron Maidens 17",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-06-28",
-    "players": 9,
-    "winner": "Simone Campion",
-    "points": 2.23,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=114928",
-    "matchplayLink": "https://app.matchplay.events/tournaments/259320"
-  },
-  {
-    "name": "Flip Frenzy ",
-    "category": "flipfrenzy",
-    "year": 2026,
-    "date": "2026-06-21",
-    "players": 8,
-    "winner": "Alex Williams AUS",
-    "points": 2.3,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=116333",
-    "matchplayLink": "https://app.matchplay.events/tournaments/257049"
-  },
-  {
-    "name": "Flip Frenzy",
-    "category": "flipfrenzy",
-    "year": 2026,
-    "date": "2026-06-18",
-    "players": 12,
-    "winner": "JayTee Saward",
-    "points": 2.28,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=116328",
-    "matchplayLink": "https://app.matchplay.events/tournaments/257035"
-  },
-  {
-    "name": "Pinawarra 37",
-    "category": "pinawarra",
-    "year": 2026,
-    "date": "2026-06-13",
-    "players": 34,
-    "winner": "Stuart Hunt",
-    "points": 34.7,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=112849",
-    "matchplayLink": "https://app.matchplay.events/tournaments/253518"
-  },
-  {
-    "name": "Illawarra Frenzy 070626",
-    "category": "flipfrenzy",
-    "year": 2026,
-    "date": "2026-06-07",
-    "players": 18,
-    "winner": "Matt Roberts",
-    "points": 7.48,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=114017",
-    "matchplayLink": ""
-  },
-  {
-    "name": "Pinhaven 16",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-06-06",
-    "players": 14,
-    "winner": "Stuart Hunt",
-    "points": 10.51,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=107541",
-    "matchplayLink": "https://app.matchplay.events/tournaments/253512"
-  },
-  {
-    "name": "Illawarra Frenzy 040626",
-    "category": "flipfrenzy",
-    "year": 2026,
-    "date": "2026-06-04",
-    "players": 14,
-    "winner": "JayTee Saward",
-    "points": 5.59,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=107540",
-    "matchplayLink": ""
-  },
-  {
-    "name": "Shoalhaven League Season 3 2026",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-06-03",
-    "players": 22,
-    "winner": "Chad Mulheron",
-    "points": 16.61,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=113985",
-    "matchplayLink": "https://app.matchplay.events/tournaments/250173"
-  },
-  {
-    "name": "Illawarra Tuesday League Seas 3 2026",
-    "category": "tuesday",
-    "year": 2026,
-    "date": "2026-06-02",
-    "players": 19,
-    "winner": "Jayson Walsh",
-    "points": 21.62,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=113984",
-    "matchplayLink": "https://app.matchplay.events/tournaments/250166"
-  },
-  {
-    "name": "Illawarra Monday League Seas 3 2026",
-    "category": "monday",
-    "year": 2026,
-    "date": "2026-06-01",
-    "players": 23,
-    "winner": "Ron Lengling",
-    "points": 22.84,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=113983",
-    "matchplayLink": "https://app.matchplay.events/tournaments/250170"
-  },
-  {
-    "name": "Iron Maidens 16",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-05-31",
-    "players": 12,
-    "winner": "Sen Gregory",
-    "points": 3.43,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=114927",
-    "matchplayLink": "https://app.matchplay.events/tournaments/253544"
-  },
-  {
-    "name": "Illawarra Frenzy 210526",
-    "category": "flipfrenzy",
-    "year": 2026,
-    "date": "2026-05-21",
-    "players": 16,
-    "winner": "Paul Soutter",
-    "points": 5.72,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=107539",
-    "matchplayLink": ""
-  },
-  {
-    "name": "Illawarra Frenzy 170526",
-    "category": "flipfrenzy",
-    "year": 2026,
-    "date": "2026-05-17",
-    "players": 12,
-    "winner": "JayTee Saward",
-    "points": 6.3,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=114018",
-    "matchplayLink": ""
-  },
-  {
-    "name": "Pinhaven 15",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-05-09",
-    "players": 14,
-    "winner": "Alex Williams AUS",
-    "points": 11.4,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=107537",
-    "matchplayLink": "https://app.matchplay.events/tournaments/247669"
-  },
-  {
-    "name": "Illawarra Frenzy 070526",
-    "category": "flipfrenzy",
-    "year": 2026,
-    "date": "2026-05-07",
-    "players": 14,
-    "winner": "Ron Lengling",
-    "points": 5.9,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=107538",
-    "matchplayLink": ""
-  },
-  {
-    "name": "Pinawarra Major",
-    "category": "pinawarra",
-    "year": 2026,
-    "date": "2026-05-03",
-    "players": 37,
-    "winner": "James Searby",
-    "points": 45.76,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=112848",
-    "matchplayLink": "https://app.matchplay.events/tournaments/248273"
-  },
-  {
-    "name": "Iron Maidens 15",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-04-26",
-    "players": 8,
-    "winner": "Susie Morgan",
-    "points": 2.01,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=114593",
-    "matchplayLink": "https://app.matchplay.events/tournaments/248052"
-  },
-  {
-    "name": "Illawarra Frenzy 230426",
-    "category": "flipfrenzy",
-    "year": 2026,
-    "date": "2026-04-23",
-    "players": 19,
-    "winner": "Paul Jones AUS",
-    "points": 8.06,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=107536",
-    "matchplayLink": ""
-  },
-  {
-    "name": "Illawarra Frenzy 190426",
-    "category": "flipfrenzy",
-    "year": 2026,
-    "date": "2026-04-19",
-    "players": 11,
-    "winner": "Paul Soutter",
-    "points": 5.81,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=107533",
-    "matchplayLink": ""
-  },
-  {
-    "name": "Shoalhaven League Season 2 2026",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-04-15",
-    "players": 12,
-    "winner": "Stuart Hunt",
-    "points": 11.08,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111244",
-    "matchplayLink": "https://app.matchplay.events/tournaments/243934"
-  },
-  {
-    "name": "Illawarra Tuesday League Seas 2 2026",
-    "category": "tuesday",
-    "year": 2026,
-    "date": "2026-04-14",
-    "players": 23,
-    "winner": "Paul Jones AUS",
-    "points": 27.07,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111243",
-    "matchplayLink": "https://app.matchplay.events/tournaments/243655"
-  },
-  {
-    "name": "Illawarra Monday League Seas 2 2026",
-    "category": "monday",
-    "year": 2026,
-    "date": "2026-04-13",
-    "players": 18,
-    "winner": "Ryan Halstead",
-    "points": 19.72,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111242",
-    "matchplayLink": "https://app.matchplay.events/tournaments/243654"
-  },
-  {
-    "name": "Pinawarra 35",
-    "category": "pinawarra",
-    "year": 2026,
-    "date": "2026-04-11",
-    "players": 24,
-    "winner": "Andrew Gliatis",
-    "points": 22.37,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=112847",
-    "matchplayLink": "https://app.matchplay.events/tournaments/244732"
-  },
-  {
-    "name": "Illawarra Frenzy 090426",
-    "category": "flipfrenzy",
-    "year": 2026,
-    "date": "2026-04-09",
-    "players": 10,
-    "winner": "JayTee Saward",
-    "points": 3.31,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=107532",
-    "matchplayLink": ""
-  },
-  {
-    "name": "Illawarra Masters Strikes",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-04-06",
-    "players": 22,
-    "winner": "Ron Lengling",
-    "points": 10.51,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=112153",
-    "matchplayLink": "https://app.matchplay.events/tournaments/241457"
-  },
-  {
-    "name": "Illawarra Masters",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-04-05",
-    "players": 37,
-    "winner": "Andrew Gliatis",
-    "points": 45.69,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=112151",
-    "matchplayLink": "https://app.matchplay.events/tournaments/241455"
-  },
-  {
-    "name": "Illawarra Women's Masters",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-04-05",
-    "players": 14,
-    "winner": "Pheobe Evans",
-    "points": 6.98,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=112152",
-    "matchplayLink": "https://app.matchplay.events/tournaments/241455"
-  },
-  {
-    "name": "Illawarra Masters Target Matchplay",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-04-03",
-    "players": 33,
-    "winner": "Paul Jones AUS",
-    "points": 28.16,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=112150",
-    "matchplayLink": "https://app.matchplay.events/tournaments/241451"
-  },
-  {
-    "name": "Illawarra Masters Frenzy 020426",
-    "category": "flipfrenzy",
-    "year": 2026,
-    "date": "2026-04-02",
-    "players": 23,
-    "winner": "Eric Henderson",
-    "points": 12.46,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=112149",
-    "matchplayLink": ""
-  },
-  {
-    "name": "Iron Maidens 14",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-03-29",
-    "players": 10,
-    "winner": "Mags Craze",
-    "points": 2.47,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111946",
-    "matchplayLink": "https://app.matchplay.events/tournaments/242988"
-  },
-  {
-    "name": "Pinhaven 14",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-03-28",
-    "players": 12,
-    "winner": "Stuart Hunt",
-    "points": 11.7,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=107530",
-    "matchplayLink": "https://app.matchplay.events/tournaments/241444"
-  },
-  {
-    "name": "Illawarra Frenzy 260326",
-    "category": "flipfrenzy",
-    "year": 2026,
-    "date": "2026-03-26",
-    "players": 11,
-    "winner": "Corey Hackett",
-    "points": 4.81,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=107529",
-    "matchplayLink": ""
-  },
-  {
-    "name": "ACS Best Game (Side Comp)",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-03-22",
-    "players": 128,
-    "winner": "Escher Lefkoff",
-    "points": 62.01,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111652",
-    "matchplayLink": "https://app.matchplay.events/tournaments/240366"
-  },
-  {
-    "name": "ACS Strikes (Side Comp)",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-03-22",
-    "players": 105,
-    "winner": "Peter Menzel",
-    "points": 40.39,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111651",
-    "matchplayLink": "https://app.matchplay.events/tournaments/240363"
-  },
-  {
-    "name": "Target Matchplay (ACS Side Comp). ",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-03-21",
-    "players": 80,
-    "winner": "Josh Burke",
-    "points": 36.32,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111653",
-    "matchplayLink": "https://app.matchplay.events/tournaments/240363"
-  },
-  {
-    "name": "ACS Group Matchplay (Side Comp)",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-03-20",
-    "players": 136,
-    "winner": "Escher Lefkoff",
-    "points": 106.79,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111573",
-    "matchplayLink": "https://app.matchplay.events/tournaments/240359"
-  },
-  {
-    "name": "ACS Max Matchplay (Side Comp)",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-03-19",
-    "players": 133,
-    "winner": "Escher Lefkoff",
-    "points": 34.62,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111572",
-    "matchplayLink": "https://app.matchplay.events/tournaments/240256"
-  },
-  {
-    "name": "Pinawarra 34",
-    "category": "pinawarra",
-    "year": 2026,
-    "date": "2026-03-14",
-    "players": 31,
-    "winner": "Stuart Hunt",
-    "points": 34.19,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=92735",
-    "matchplayLink": "https://app.matchplay.events/tournaments/239169"
-  },
-  {
-    "name": "Illawarra Frenzy 120326",
-    "category": "flipfrenzy",
-    "year": 2026,
-    "date": "2026-03-12",
-    "players": 11,
-    "winner": "Paul Jones AUS",
-    "points": 4.49,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=107528",
-    "matchplayLink": ""
-  },
-  {
-    "name": "Illawarra Frenzy 080326",
-    "category": "flipfrenzy",
-    "year": 2026,
-    "date": "2026-03-08",
-    "players": 9,
-    "winner": "Paul Soutter",
-    "points": 4.63,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=107527",
-    "matchplayLink": ""
-  },
-  {
-    "name": "Pinhaven 13",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-03-07",
-    "players": 11,
-    "winner": "Stuart Hunt",
-    "points": 8.91,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=107526",
-    "matchplayLink": "https://app.matchplay.events/tournaments/238590"
-  },
-  {
-    "name": "Illawarra Frenzy 010326",
-    "category": "flipfrenzy",
-    "year": 2026,
-    "date": "2026-03-01",
-    "players": 15,
-    "winner": "Alex Williams AUS",
-    "points": 6.62,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=107525",
-    "matchplayLink": ""
-  },
-  {
-    "name": "Illawarra Frenzy 260226",
-    "category": "flipfrenzy",
-    "year": 2026,
-    "date": "2026-02-26",
-    "players": 12,
-    "winner": "Paul Jones AUS",
-    "points": 4.96,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=107535",
-    "matchplayLink": ""
-  },
-  {
-    "name": "Iron Maidens 13",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-02-22",
-    "players": 15,
-    "winner": "Mags Craze",
-    "points": 3.69,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=110932",
-    "matchplayLink": "https://app.matchplay.events/tournaments/236946"
-  },
-  {
-    "name": "Shoalhaven League Season 1 2026",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-02-18",
-    "players": 16,
-    "winner": "Stuart Hunt",
-    "points": 14.11,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=105768",
-    "matchplayLink": "https://app.matchplay.events/tournaments/233256"
-  },
-  {
-    "name": "Illawarra Tuesday League Seas 1 2026",
-    "category": "tuesday",
-    "year": 2026,
-    "date": "2026-02-17",
-    "players": 28,
-    "winner": "Paul Jones AUS",
-    "points": 32.46,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=105770",
-    "matchplayLink": "https://app.matchplay.events/tournaments/233260"
-  },
-  {
-    "name": "Illawarra Monday League Seas 1 2026",
-    "category": "monday",
-    "year": 2026,
-    "date": "2026-02-16",
-    "players": 24,
-    "winner": "Stuart Hunt",
-    "points": 26.58,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=105769",
-    "matchplayLink": "https://app.matchplay.events/tournaments/233052"
-  },
-  {
-    "name": "Pinawarra 33",
-    "category": "pinawarra",
-    "year": 2026,
-    "date": "2026-02-14",
-    "players": 24,
-    "winner": "Richard Rhodes",
-    "points": 25.19,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=92734",
-    "matchplayLink": "https://app.matchplay.events/tournaments/233581"
-  },
-  {
-    "name": "Illawarra Frenzt 120226",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-02-12",
-    "players": 14,
-    "winner": "Paul Jones AUS",
-    "points": 5.62,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=107534",
-    "matchplayLink": ""
-  },
-  {
-    "name": "Illawarra Frenzy 080226",
-    "category": "flipfrenzy",
-    "year": 2026,
-    "date": "2026-02-08",
-    "players": 9,
-    "winner": "Daniel Craze",
-    "points": 5.22,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=107524",
-    "matchplayLink": ""
-  },
-  {
-    "name": "Pinhaven 12",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-02-07",
-    "players": 14,
-    "winner": "Stuart Hunt",
-    "points": 9.18,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=107523",
-    "matchplayLink": "https://app.matchplay.events/tournaments/233578"
-  },
-  {
-    "name": "Inaugural NSW Women's State Titles",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-02-01",
-    "players": 16,
-    "winner": "Sierra Charalambous",
-    "points": 11.3,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=107522",
-    "matchplayLink": ""
-  },
-  {
-    "name": "Illawarra Frenzy 290126",
-    "category": "flipfrenzy",
-    "year": 2026,
-    "date": "2026-01-29",
-    "players": 13,
-    "winner": "Ron Lengling",
-    "points": 4.64,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=107521",
-    "matchplayLink": ""
-  },
-  {
-    "name": "Iron Maidens 12",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-01-25",
-    "players": 10,
-    "winner": "Amanda Goodyer",
-    "points": 2.47,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=108584",
-    "matchplayLink": "https://app.matchplay.events/tournaments/232432"
-  },
-  {
-    "name": "Illawarra Frenzy 180126",
-    "category": "flipfrenzy",
-    "year": 2026,
-    "date": "2026-01-18",
-    "players": 15,
-    "winner": "Mags Craze",
-    "points": 7.41,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=107520",
-    "matchplayLink": ""
-  },
-  {
-    "name": "Illawarra Frenzy 150126",
-    "category": "flipfrenzy",
-    "year": 2026,
-    "date": "2026-01-15",
-    "players": 16,
-    "winner": "Dave Edwards AUS",
-    "points": 5.76,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=107519",
-    "matchplayLink": ""
-  },
-  {
-    "name": "Pinawarra 32",
-    "category": "pinawarra",
-    "year": 2026,
-    "date": "2026-01-11",
-    "players": 29,
-    "winner": "Paul Jones AUS",
-    "points": 30.46,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=92733",
-    "matchplayLink": "https://app.matchplay.events/tournaments/228569"
-  },
-  {
-    "name": "Pinhaven 11",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-01-03",
-    "players": 14,
-    "winner": "Ron Lengling",
-    "points": 8.66,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=92305",
-    "matchplayLink": "https://app.matchplay.events/tournaments/227054"
-  },
-  {
-    "name": "Illawarra New Years Bash",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-01-01",
-    "players": 22,
-    "winner": "Jayson Walsh",
-    "points": 15.97,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=106334",
-    "matchplayLink": "https://app.matchplay.events/tournaments/227051"
-  },
-  {
-    "name": "Shoalhaven League 2025 Seas 7",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-12-17",
-    "players": 15,
-    "winner": "Stuart Hunt",
-    "points": 12.61,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=103842",
-    "matchplayLink": ""
-  },
-  {
-    "name": "Illawarra Tuesday League Seas 7",
-    "category": "tuesday",
-    "year": 2025,
-    "date": "2025-12-16",
-    "players": 23,
-    "winner": "Peter Malady",
-    "points": 28.22,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=103841",
-    "matchplayLink": "https://app.matchplay.events/tournaments/221571"
-  },
-  {
-    "name": "Illawarra Monday League Seas 6",
-    "category": "monday",
-    "year": 2025,
-    "date": "2025-12-15",
-    "players": 36,
-    "winner": "Stuart Hunt",
-    "points": 37.1,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=103840",
-    "matchplayLink": "https://app.matchplay.events/tournaments/221568"
-  },
-  {
-    "name": "Illawarra Iron Maidens 11",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-12-14",
-    "players": 8,
-    "winner": "Amanda Goodyer",
-    "points": 1.96,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=105335",
-    "matchplayLink": "https://app.matchplay.events/tournaments/224831"
-  },
-  {
-    "name": "Pinawarra 31",
-    "category": "pinawarra",
-    "year": 2025,
-    "date": "2025-12-13",
-    "players": 39,
-    "winner": "Stuart Hunt",
-    "points": 41.94,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=92732",
-    "matchplayLink": "https://app.matchplay.events/tournaments/221574"
-  },
-  {
-    "name": "Pinhaven 10",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-12-06",
-    "players": 18,
-    "winner": "Eric Henderson",
-    "points": 15.57,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=92304",
-    "matchplayLink": "https://app.matchplay.events/tournaments/224126"
-  },
-  {
-    "name": "Iron Maidens 10",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-11-23",
-    "players": 12,
-    "winner": "Mags Craze",
-    "points": 2.9,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=104692",
-    "matchplayLink": "https://app.matchplay.events/tournaments/221643"
-  },
-  {
-    "name": "Pinawarra 30",
-    "category": "pinawarra",
-    "year": 2025,
-    "date": "2025-11-08",
-    "players": 35,
-    "winner": "Will De Vos",
-    "points": 38.34,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=92731",
-    "matchplayLink": "https://app.matchplay.events/tournaments/219192"
-  },
-  {
-    "name": "Pinhaven 9",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-11-01",
-    "players": 12,
-    "winner": "Eric Henderson",
-    "points": 11.27,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=92303",
-    "matchplayLink": "https://app.matchplay.events/tournaments/217478"
-  },
-  {
-    "name": "Shoalhaven League 2025 Seas 6",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-10-29",
-    "players": 13,
-    "winner": "Stuart Hunt",
-    "points": 11.38,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=101834",
-    "matchplayLink": "https://app.matchplay.events/tournaments/190042"
-  },
-  {
-    "name": "Illawarra Tuesday League Seas 6",
-    "category": "tuesday",
-    "year": 2025,
-    "date": "2025-10-28",
-    "players": 27,
-    "winner": "Jayson Walsh",
-    "points": 30.67,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=101833",
-    "matchplayLink": "https://app.matchplay.events/tournaments/214640"
-  },
-  {
-    "name": "Illawarra Monday League Seas 5",
-    "category": "monday",
-    "year": 2025,
-    "date": "2025-10-27",
-    "players": 34,
-    "winner": "Stuart Hunt",
-    "points": 31.92,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=101760",
-    "matchplayLink": "https://app.matchplay.events/tournaments/214642"
-  },
-  {
-    "name": "Iron Maidens 9",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-10-26",
-    "players": 15,
-    "winner": "Sierra Charalambous",
-    "points": 3.64,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=103479",
-    "matchplayLink": "https://app.matchplay.events/tournaments/217045"
-  },
-  {
-    "name": "Illawarra Best Game",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-10-05",
-    "players": 18,
-    "winner": "Paul Jones AUS",
-    "points": 10.07,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=102096",
-    "matchplayLink": "https://app.matchplay.events/tournaments/188320"
-  },
-  {
-    "name": "Pinawarra 29",
-    "category": "pinawarra",
-    "year": 2025,
-    "date": "2025-10-04",
-    "players": 47,
-    "winner": "Stuart Hunt",
-    "points": 51.11,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=92730",
-    "matchplayLink": "https://app.matchplay.events/tournaments/211344"
-  },
-  {
-    "name": "Iron Maidens 8",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-09-28",
-    "players": 14,
-    "winner": "Mags Craze",
-    "points": 3.39,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=102062",
-    "matchplayLink": "https://app.matchplay.events/tournaments/212580"
-  },
-  {
-    "name": "Pinawarra 28",
-    "category": "pinawarra",
-    "year": 2025,
-    "date": "2025-09-13",
-    "players": 29,
-    "winner": "Andrew Gliatis",
-    "points": 28.19,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=92729",
-    "matchplayLink": ""
-  },
-  {
-    "name": "Shoalhaven League 2025 Seas 5",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-09-10",
-    "players": 15,
-    "winner": "Stuart Hunt",
-    "points": 14.37,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=99204",
-    "matchplayLink": "https://app.matchplay.events/tournaments/190041"
-  },
-  {
-    "name": "Illawarra Tuesday League Seas 5",
-    "category": "tuesday",
-    "year": 2025,
-    "date": "2025-09-09",
-    "players": 29,
-    "winner": "Paul Jones AUS",
-    "points": 31.8,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=99203",
-    "matchplayLink": "https://app.matchplay.events/tournaments/204813"
-  },
-  {
-    "name": "Illawarra Monday League Seas 4",
-    "category": "monday",
-    "year": 2025,
-    "date": "2025-09-08",
-    "players": 29,
-    "winner": "Daniel Craze",
-    "points": 26.33,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=99148",
-    "matchplayLink": "https://app.matchplay.events/tournaments/203795"
-  },
-  {
-    "name": "Pinhaven 8",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-09-06",
-    "players": 16,
-    "winner": "Stuart Hunt",
-    "points": 12.66,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=92301",
-    "matchplayLink": "https://app.matchplay.events/tournaments/209184"
-  },
-  {
-    "name": "Iron Maidens 7",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-08-31",
-    "players": 9,
-    "winner": "Mags Craze",
-    "points": 2.16,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=100695",
-    "matchplayLink": "https://app.matchplay.events/tournaments/207186"
-  },
-  {
-    "name": "Pinawarra 27",
-    "category": "pinawarra",
-    "year": 2025,
-    "date": "2025-08-09",
-    "players": 30,
-    "winner": "Andrew Gliatis",
-    "points": 29.76,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=92728",
-    "matchplayLink": "https://app.matchplay.events/tournaments/204598"
-  },
-  {
-    "name": "Pinhaven 7",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-08-02",
-    "players": 17,
-    "winner": "Phillip Mills",
-    "points": 10.79,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=92300",
-    "matchplayLink": "https://app.matchplay.events/tournaments/204309"
-  },
-  {
-    "name": "Shoalhaven League 2025 Seas 4",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-07-23",
-    "players": 16,
-    "winner": "Stuart Hunt",
-    "points": 12.32,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=96647",
-    "matchplayLink": "https://app.matchplay.events/tournaments/190040"
-  },
-  {
-    "name": "Illawarra Tuesday League Seas 4",
-    "category": "tuesday",
-    "year": 2025,
-    "date": "2025-07-22",
-    "players": 24,
-    "winner": "Paul Jones AUS",
-    "points": 25.9,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=96646",
-    "matchplayLink": "https://app.matchplay.events/tournaments/195824"
-  },
-  {
-    "name": "Illawarra Monday League Seas 3",
-    "category": "monday",
-    "year": 2025,
-    "date": "2025-07-21",
-    "players": 32,
-    "winner": "Stuart Hunt",
-    "points": 28.31,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=96645",
-    "matchplayLink": "https://app.matchplay.events/tournaments/195818"
-  },
-  {
-    "name": "Iron Maidens 6",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-07-13",
-    "players": 11,
-    "winner": "Mags Craze",
-    "points": 2.64,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=98764",
-    "matchplayLink": "https://app.matchplay.events/tournaments/200621"
-  },
-  {
-    "name": "Pinawarra 26",
-    "category": "pinawarra",
-    "year": 2025,
-    "date": "2025-07-12",
-    "players": 35,
-    "winner": "Stuart Hunt",
-    "points": 34.47,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=92727",
-    "matchplayLink": "https://app.matchplay.events/tournaments/200409"
-  },
-  {
-    "name": "Pinhaven 6",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-07-05",
-    "players": 17,
-    "winner": "Paul Soutter",
-    "points": 11.23,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=92299",
-    "matchplayLink": "https://app.matchplay.events/tournaments/200403"
-  },
-  {
-    "name": "Iron Maidens 5",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-06-15",
-    "players": 13,
-    "winner": "Karyn Hunt",
-    "points": 3.14,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=92726",
-    "matchplayLink": "https://app.matchplay.events/tournaments/196777"
-  },
-  {
-    "name": "Pinawarra 25",
-    "category": "pinawarra",
-    "year": 2025,
-    "date": "2025-06-14",
-    "players": 35,
-    "winner": "Jason Lambert AUS",
-    "points": 35.98,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=92725",
-    "matchplayLink": "https://app.matchplay.events/tournaments/197053"
-  },
-  {
-    "name": "Shoalhaven League 2025 Seas 3",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-06-04",
-    "players": 14,
-    "winner": "Lionel Boekenstein",
-    "points": 12.11,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=94932",
-    "matchplayLink": "https://app.matchplay.events/tournaments/190042"
-  },
-  {
-    "name": "Illawarra Tuesday League 2025 Seas 3",
-    "category": "tuesday",
-    "year": 2025,
-    "date": "2025-06-03",
-    "players": 25,
-    "winner": "Paul Jones AUS",
-    "points": 26.56,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=94931",
-    "matchplayLink": "https://app.matchplay.events/tournaments/190042"
-  },
-  {
-    "name": "Illawarra Monday League Seas 2",
-    "category": "monday",
-    "year": 2025,
-    "date": "2025-06-02",
-    "players": 27,
-    "winner": "Paul Soutter",
-    "points": 22.58,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=94494",
-    "matchplayLink": "https://app.matchplay.events/tournaments/194195"
-  },
-  {
-    "name": "Pinhaven 5",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-05-31",
-    "players": 9,
-    "winner": "Stuart Hunt",
-    "points": 5.98,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=92298",
-    "matchplayLink": "https://app.matchplay.events/tournaments/194858"
-  },
-  {
-    "name": "Iron Maidens 4",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-05-17",
-    "players": 12,
-    "winner": "Mags Craze",
-    "points": 3.12,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=92724",
-    "matchplayLink": "https://app.matchplay.events/tournaments/192790"
-  },
-  {
-    "name": "Pinawarra 24",
-    "category": "pinawarra",
-    "year": 2025,
-    "date": "2025-05-10",
-    "players": 41,
-    "winner": "Paul Jones AUS",
-    "points": 29.24,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=92723",
-    "matchplayLink": ""
-  },
-  {
-    "name": "Pinhaven 4",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-05-03",
-    "players": 14,
-    "winner": "John Fish",
-    "points": 6.93,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=92297",
-    "matchplayLink": "https://app.matchplay.events/tournaments/190781"
-  },
-  {
-    "name": "Illawarra Masters Strikes",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-04-21",
-    "players": 29,
-    "winner": "Paul Jones AUS",
-    "points": 16.76,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=94248",
-    "matchplayLink": "https://app.matchplay.events/tournaments/188870"
-  },
-  {
-    "name": "Illawarra Masters Group Matchplay",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-04-20",
-    "players": 38,
-    "winner": "Andrew Gliatis",
-    "points": 41.88,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=94247",
-    "matchplayLink": "https://app.matchplay.events/tournaments/188321"
-  },
-  {
-    "name": "Illawarra Masters Card-based Best Game",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-04-20",
-    "players": 34,
-    "winner": "Paul Jones AUS",
-    "points": 25.87,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=94246",
-    "matchplayLink": "https://app.matchplay.events/tournaments/188320"
-  },
-  {
-    "name": "Illawarra Masters Target Matchplay",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-04-18",
-    "players": 39,
-    "winner": "Matthew Venables",
-    "points": 31.38,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=94245",
-    "matchplayLink": "https://app.matchplay.events/tournaments/189421"
-  },
-  {
-    "name": "Illawarra Masters Flip Frenzy",
-    "category": "flipfrenzy",
-    "year": 2025,
-    "date": "2025-04-17",
-    "players": 35,
-    "winner": "Paul Jones AUS",
-    "points": 3.16,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=94244",
-    "matchplayLink": "https://app.matchplay.events/tournaments/188319"
-  },
-  {
-    "name": "Shoalhaven League Seas 2",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-04-16",
-    "players": 11,
-    "winner": "Lionel Boekenstein",
-    "points": 7.43,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=92176",
-    "matchplayLink": "https://app.matchplay.events/tournaments/187045"
-  },
-  {
-    "name": "Illawarra Tuesday Season 2 2025",
-    "category": "tuesday",
-    "year": 2025,
-    "date": "2025-04-15",
-    "players": 34,
-    "winner": "Paul Jones AUS",
-    "points": 33.54,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=92460",
-    "matchplayLink": "https://app.matchplay.events/tournaments/183814"
-  },
-  {
-    "name": "Iron Maidens 3",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-04-13",
-    "players": 11,
-    "winner": "Pheobe Evans",
-    "points": 2.2,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=96197",
-    "matchplayLink": "https://app.matchplay.events/tournaments/187705"
-  },
-  {
-    "name": "Pinawarra 23",
-    "category": "pinawarra",
-    "year": 2025,
-    "date": "2025-04-12",
-    "players": 31,
-    "winner": "Pat Nichols",
-    "points": 25.89,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=92721",
-    "matchplayLink": "https://app.matchplay.events/tournaments/187412"
-  },
-  {
-    "name": "Illawarra Monday League Season 1",
-    "category": "monday",
-    "year": 2025,
-    "date": "2025-04-07",
-    "players": 24,
-    "winner": "Ron Lengling",
-    "points": 23.38,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=91463",
-    "matchplayLink": "https://app.matchplay.events/tournaments/187892"
-  },
-  {
-    "name": "Pinhaven 3",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-04-05",
-    "players": 12,
-    "winner": "Eric Henderson",
-    "points": 6.71,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=92296",
-    "matchplayLink": "https://app.matchplay.events/tournaments/186372"
-  },
-  {
-    "name": "Iron Maidens 2",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-03-16",
-    "players": 12,
-    "winner": "Mags Craze",
-    "points": 2.4,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=92720",
-    "matchplayLink": "https://app.matchplay.events/tournaments/182066"
-  },
-  {
-    "name": "Pinawarra 22",
-    "category": "pinawarra",
-    "year": 2025,
-    "date": "2025-03-08",
-    "players": 30,
-    "winner": "Paul Jones AUS",
-    "points": 24.31,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=92719",
-    "matchplayLink": "https://app.matchplay.events/tournaments/182163"
-  },
-  {
-    "name": "Pinhaven 2",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-03-01",
-    "players": 16,
-    "winner": "Stuart Hunt",
-    "points": 7.44,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=92295",
-    "matchplayLink": "https://app.matchplay.events/tournaments/180407"
-  },
-  {
-    "name": "Nowra Frenzy 260225",
-    "category": "flipfrenzy",
-    "year": 2025,
-    "date": "2025-02-26",
-    "players": 10,
-    "winner": "Glenn Hamilton",
-    "points": 0.88,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=91603",
-    "matchplayLink": ""
-  },
-  {
-    "name": "Nowra Frenzy 190225",
-    "category": "flipfrenzy",
-    "year": 2025,
-    "date": "2025-02-19",
-    "players": 9,
-    "winner": "Phillip Mills",
-    "points": 0.63,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=91602",
-    "matchplayLink": ""
-  },
-  {
-    "name": "Illawarra Pinball Tuesday night League (season 5)",
-    "category": "tuesday",
-    "year": 2025,
-    "date": "2025-02-18",
-    "players": 36,
-    "winner": "Paul Jones AUS",
-    "points": 35.34,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=87970",
-    "matchplayLink": "https://app.matchplay.events/tournaments/178388"
-  },
-  {
-    "name": "Illawarra Monday Frenzy 2",
-    "category": "flipfrenzy",
-    "year": 2025,
-    "date": "2025-02-17",
-    "players": 9,
-    "winner": "Kris Forner",
-    "points": 1.39,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=91332",
-    "matchplayLink": "https://app.matchplay.events/tournaments/179253"
-  },
-  {
-    "name": "Shoalhaven League Season 1",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-02-12",
-    "players": 15,
-    "winner": "Peter Godfrey",
-    "points": 3.79,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=87972",
-    "matchplayLink": "https://app.matchplay.events/tournaments/178391"
-  },
-  {
-    "name": "Illawarra Monday Frenzy",
-    "category": "flipfrenzy",
-    "year": 2025,
-    "date": "2025-02-10",
-    "players": 16,
-    "winner": "Sierra Charalambous",
-    "points": 1.76,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=91069",
-    "matchplayLink": "https://app.matchplay.events/tournaments/178139"
-  },
-  {
-    "name": "Illawarra Iron Maidens 1",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-02-09",
-    "players": 20,
-    "winner": "Celeste Saunders",
-    "points": 3.6,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=90947",
-    "matchplayLink": "https://app.matchplay.events/tournaments/178131"
-  },
-  {
-    "name": "Pinawarra 21",
-    "category": "pinawarra",
-    "year": 2025,
-    "date": "2025-02-08",
-    "players": 29,
-    "winner": "James Searby",
-    "points": 19.29,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=91068",
-    "matchplayLink": "https://app.matchplay.events/tournaments/177947"
-  },
-  {
-    "name": "Pin Haven",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-01-25",
-    "players": 16,
-    "winner": "Eric Henderson",
-    "points": 8.49,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=89694",
-    "matchplayLink": ""
-  },
-  {
-    "name": "Pinawarra 20",
-    "category": "pinawarra",
-    "year": 2025,
-    "date": "2025-01-11",
-    "players": 32,
-    "winner": "Paul Jones AUS",
-    "points": 23.39,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=88047",
-    "matchplayLink": "https://app.matchplay.events/tournaments/173796"
-  },
-  {
-    "name": "Illawarra End of Year Max Matchplay 2024",
-    "category": "other",
-    "year": 2024,
-    "date": "2024-12-21",
-    "players": 48,
-    "winner": "Andrew Gliatis",
-    "points": 12.14,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=86478",
-    "matchplayLink": ""
-  },
-  {
-    "name": "Illawarra Pinball Tuesday night League (season 4)",
-    "category": "tuesday",
-    "year": 2024,
-    "date": "2024-12-10",
-    "players": 40,
-    "winner": "Andrew Gliatis",
-    "points": 42.57,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=84549",
-    "matchplayLink": "https://app.matchplay.events/tournaments/166634"
-  },
-  {
-    "name": "Pinawarra 19",
-    "category": "pinawarra",
-    "year": 2024,
-    "date": "2024-12-07",
-    "players": 32,
-    "winner": "Paul Jones AUS",
-    "points": 24.51,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=85780",
-    "matchplayLink": "https://app.matchplay.events/tournaments/169154"
-  },
-  {
-    "name": "Pinawarra 18",
-    "category": "pinawarra",
-    "year": 2024,
-    "date": "2024-11-09",
-    "players": 31,
-    "winner": "Jayson Walsh",
-    "points": 23.3,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=84564",
-    "matchplayLink": "https://app.matchplay.events/tournaments/164915"
-  },
-  {
-    "name": "Illawarra Pinball Tuesday night League (season 3)",
-    "category": "tuesday",
-    "year": 2024,
-    "date": "2024-10-22",
-    "players": 41,
-    "winner": "Dylon De Sousa",
-    "points": 40.41,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=81220",
-    "matchplayLink": "https://app.matchplay.events/tournaments/165489"
-  },
-  {
-    "name": "Pinawarra 17",
-    "category": "pinawarra",
-    "year": 2024,
-    "date": "2024-10-12",
-    "players": 33,
-    "winner": "Steve O'Bryan",
-    "points": 20.76,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=81245",
-    "matchplayLink": "https://app.matchplay.events/tournaments/161212"
-  },
-  {
-    "name": "Pinawarra 16",
-    "category": "pinawarra",
-    "year": 2024,
-    "date": "2024-09-21",
-    "players": 25,
-    "winner": "Stuart Hunt",
-    "points": 16.63,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=81226",
-    "matchplayLink": "https://app.matchplay.events/tournaments/158662"
-  },
-  {
-    "name": "Illawarra Pinball Club Tuesday Night Flip Frenzy",
-    "category": "flipfrenzy",
-    "year": 2024,
-    "date": "2024-09-03",
-    "players": 44,
-    "winner": "Jake Jones",
-    "points": 3.16,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=81219",
-    "matchplayLink": "https://app.matchplay.events/tournaments/170683"
-  },
-  {
-    "name": "Illawarra Pinball Club Tuesday Night Flip Frenzy",
-    "category": "flipfrenzy",
-    "year": 2024,
-    "date": "2024-08-27",
-    "players": 35,
-    "winner": "Dave Edwards AUS",
-    "points": 2.7,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=81210",
-    "matchplayLink": "https://app.matchplay.events/tournaments/170683"
-  },
-  {
-    "name": "Illawarra Pinballl Club Tuesday IFPA Flip Frenzy",
-    "category": "flipfrenzy",
-    "year": 2024,
-    "date": "2024-08-20",
-    "players": 30,
-    "winner": "Stuart Hunt",
-    "points": 1.36,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=81196",
-    "matchplayLink": ""
-  },
-  {
-    "name": "Illawarra Pinball Tuesday night League",
-    "category": "tuesday",
-    "year": 2024,
-    "date": "2024-08-13",
-    "players": 36,
-    "winner": "Paul Soutter",
-    "points": 20.5,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=80024",
-    "matchplayLink": "https://app.matchplay.events/tournaments/149230"
-  },
-  {
-    "name": "Pinawarra 15",
-    "category": "pinawarra",
-    "year": 2024,
-    "date": "2024-08-10",
-    "players": 24,
-    "winner": "Paul Jones AUS",
-    "points": 17.74,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=81144",
-    "matchplayLink": "https://app.matchplay.events/tournaments/153644"
-  },
-  {
-    "name": "Pinawarra 14",
-    "category": "pinawarra",
-    "year": 2024,
-    "date": "2024-07-13",
-    "players": 35,
-    "winner": "Paul Jones AUS",
-    "points": 21.41,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=80122",
-    "matchplayLink": "https://app.matchplay.events/tournaments/150518"
-  },
-  {
-    "name": "Illawarra Pinball Tuesday night League",
-    "category": "tuesday",
-    "year": 2024,
-    "date": "2024-06-25",
-    "players": 46,
-    "winner": "Matt Roberts",
-    "points": 19.24,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=77733",
-    "matchplayLink": "https://app.matchplay.events/tournaments/149224"
-  },
-  {
-    "name": "Pinawarra 13",
-    "category": "pinawarra",
-    "year": 2024,
-    "date": "2024-06-08",
-    "players": 27,
-    "winner": "Stuart Hunt",
-    "points": 17.26,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=78686",
-    "matchplayLink": "https://app.matchplay.events/tournaments/146336"
-  },
-  {
-    "name": "Pinawarra 11",
-    "category": "pinawarra",
-    "year": 2024,
-    "date": "2024-04-13",
-    "players": 19,
-    "winner": "Paul Jones AUS",
-    "points": 13.74,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=76016",
-    "matchplayLink": "https://app.matchplay.events/tournaments/139094"
-  },
-  {
-    "name": "Illawarra Pinball Masters Card format Tournament",
-    "category": "other",
-    "year": 2024,
-    "date": "2024-03-31",
-    "players": 38,
-    "winner": "Paul Jones AUS",
-    "points": 17.37,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=75076",
-    "matchplayLink": "https://app.matchplay.events/tournaments/136990"
-  },
-  {
-    "name": "Illawarra Pinball Masters Group Matchplay",
-    "category": "other",
-    "year": 2024,
-    "date": "2024-03-30",
-    "players": 40,
-    "winner": "Logan Jones",
-    "points": 25.82,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=75078",
-    "matchplayLink": "https://app.matchplay.events/tournaments/136985"
-  },
-  {
-    "name": "Illawarra Pinball Masters target Matchplay",
-    "category": "other",
-    "year": 2024,
-    "date": "2024-03-29",
-    "players": 45,
-    "winner": "Paul Jones AUS",
-    "points": 20.46,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=75077",
-    "matchplayLink": "https://app.matchplay.events/tournaments/136981"
-  },
-  {
-    "name": "Pinawarra 10",
-    "category": "pinawarra",
-    "year": 2024,
-    "date": "2024-03-09",
-    "players": 20,
-    "winner": "Logan Jones",
-    "points": 12.63,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=74987",
-    "matchplayLink": ""
-  },
-  {
-    "name": "Pinawarra 9",
-    "category": "pinawarra",
-    "year": 2024,
-    "date": "2024-02-10",
-    "players": 30,
-    "winner": "Paul Jones AUS",
-    "points": 18.06,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=72918",
-    "matchplayLink": "https://app.matchplay.events/tournaments/131039"
-  },
-  {
-    "name": "Illawarra Pinball Club Sunday flip frenzy",
-    "category": "flipfrenzy",
-    "year": 2024,
-    "date": "2024-02-04",
-    "players": 12,
-    "winner": "Stuart Hunt",
-    "points": 1.59,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=71276",
-    "matchplayLink": "https://app.matchplay.events/tournaments/115494"
-  },
-  {
-    "name": "Illawarra Thursday Frenzy",
-    "category": "flipfrenzy",
-    "year": 2024,
-    "date": "2024-02-01",
-    "players": 17,
-    "winner": "Stuart Hunt",
-    "points": 1.22,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=73457",
-    "matchplayLink": "https://app.matchplay.events/tournaments/128204"
-  },
-  {
-    "name": "Aussie Day Target Matchplay",
-    "category": "other",
-    "year": 2024,
-    "date": "2024-01-26",
-    "players": 26,
-    "winner": "Paul Jones AUS",
-    "points": 14.17,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=72190",
-    "matchplayLink": "https://app.matchplay.events/tournaments/129287"
-  },
-  {
-    "name": "Illawarra Pinball Club Sunday Flip Frenzy",
-    "category": "flipfrenzy",
-    "year": 2024,
-    "date": "2024-01-21",
-    "players": 15,
-    "winner": "Paul Jones AUS",
-    "points": 2.61,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=71273",
-    "matchplayLink": "https://app.matchplay.events/tournaments/115494"
-  },
-  {
-    "name": "Thursday Night Flip Frenzy",
-    "category": "flipfrenzy",
-    "year": 2024,
-    "date": "2024-01-18",
-    "players": 25,
-    "winner": "Paul Jones AUS",
-    "points": 1.52,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=71255",
-    "matchplayLink": "https://app.matchplay.events/tournaments/128204"
-  },
-  {
-    "name": "Pinawarra 8",
-    "category": "pinawarra",
-    "year": 2024,
-    "date": "2024-01-13",
-    "players": 40,
-    "winner": "Jake Jones",
-    "points": 26.26,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=71262",
-    "matchplayLink": "https://app.matchplay.events/tournaments/127676"
-  },
-  {
-    "name": "Pinawarra 7",
-    "category": "pinawarra",
-    "year": 2023,
-    "date": "2023-12-09",
-    "players": 19,
-    "winner": "Jayson Walsh",
-    "points": 9.3,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=66012",
-    "matchplayLink": "https://app.matchplay.events/tournaments/124006"
-  },
-  {
-    "name": "Pinawarra 6",
-    "category": "pinawarra",
-    "year": 2023,
-    "date": "2023-11-11",
-    "players": 23,
-    "winner": "Logan Jones",
-    "points": 12.09,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=66011",
-    "matchplayLink": "https://app.matchplay.events/tournaments/120831"
-  },
-  {
-    "name": "Pinawarra 5",
-    "category": "pinawarra",
-    "year": 2023,
-    "date": "2023-10-14",
-    "players": 25,
-    "winner": "Andrew Gliatis",
-    "points": 9.67,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=66010",
-    "matchplayLink": "https://app.matchplay.events/tournaments/117672"
-  },
-  {
-    "name": "Pinawarra 4",
-    "category": "pinawarra",
-    "year": 2023,
-    "date": "2023-09-09",
-    "players": 27,
-    "winner": "Pat Nichols",
-    "points": 18.52,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=66009",
-    "matchplayLink": "https://app.matchplay.events/tournaments/111907"
-  },
-  {
-    "name": "Pinawarra 3",
-    "category": "pinawarra",
-    "year": 2023,
-    "date": "2023-08-12",
-    "players": 36,
-    "winner": "Logan Jones",
-    "points": 14.82,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=65018",
-    "matchplayLink": "https://app.matchplay.events/tournaments/110885"
-  },
-  {
-    "name": "Pinawarra 2",
-    "category": "pinawarra",
-    "year": 2023,
-    "date": "2023-07-08",
-    "players": 23,
-    "winner": "Paul Jones AUS",
-    "points": 11.9,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=63806",
-    "matchplayLink": "https://app.matchplay.events/tournaments/107824"
-  },
-  {
-    "name": "Pinawarra",
-    "category": "pinawarra",
-    "year": 2023,
-    "date": "2023-06-10",
-    "players": 33,
-    "winner": "Paul Jones AUS",
-    "points": 11.17,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=63114",
-    "matchplayLink": "https://app.matchplay.events/tournaments/105733"
+// scripts/sync.js
+//
+// Pulls this director's tournament list + results from the real IFPA API,
+// matches each event to its Match Play tournament (by owner + name/date),
+// and writes events.json for the Squarespace widget to fetch().
+//
+// IFPA field mapping (confirmed from a real API response, 2026-07):
+//   GET /director/{id}/tournaments/PAST?api_key=...
+//     -> { tournaments: [{ tournament_id, tournament_name, event_name,
+//                           event_start_date, event_end_date, player_count, ... }] }
+//   GET /tournament/{id}/results?api_key=...
+//     -> { tournament_id, results: [{ name, position, points, ... }] }
+//        results[] is sorted by position ascending, so results[0] is the winner.
+//        "points" and "position" are returned as strings — cast to number.
+//
+// Match Play field mapping (confirmed from a real API response, 2026-07):
+//   GET /api/tournaments?owner={id}&limit=100&page=N
+//     -> { data: [{ tournamentId, name, status, startUtc, startLocal,
+//                    endUtc, endLocal, test, organizerId, ... }] }
+//        "test": true marks template/practice tournaments that were never
+//        actually played — these must be excluded from matching.
+//        startLocal is "YYYY-MM-DD HH:MM:SS" — first 10 chars give the date.
+
+const fs = require("fs");
+
+const IFPA_API_KEY = process.env.IFPA_API_KEY;
+const MATCHPLAY_API_TOKEN = process.env.MATCHPLAY_API_TOKEN;
+const DIRECTOR_ID = 2909;
+const MATCHPLAY_OWNER_ID = 25018;
+const IFPA_BASE = "https://api.ifpapinball.com";
+const MATCHPLAY_BASE = "https://app.matchplay.events";
+
+if (!IFPA_API_KEY) {
+  console.error("Missing IFPA_API_KEY environment variable.");
+  process.exit(1);
+}
+if (!MATCHPLAY_API_TOKEN) {
+  console.warn("Missing MATCHPLAY_API_TOKEN — matchplayLink will be left blank for all events.");
+}
+
+async function ifpaGet(path) {
+  const url = `${IFPA_BASE}${path}${path.includes("?") ? "&" : "?"}api_key=${IFPA_API_KEY}`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`${path} -> HTTP ${res.status}`);
+  return res.json();
+}
+
+async function matchplayGet(path) {
+  const res = await fetch(`${MATCHPLAY_BASE}${path}`, {
+    headers: { Authorization: `Bearer ${MATCHPLAY_API_TOKEN}` }
+  });
+  if (!res.ok) throw new Error(`${path} -> HTTP ${res.status}`);
+  return res.json();
+}
+
+function classify(name) {
+  const n = name.toLowerCase();
+  if (n.includes("frenzy")) return "flipfrenzy";
+  if (n.includes("monday")) return "monday";
+  if (n.includes("tuesday")) return "tuesday";
+  if (n.startsWith("pinawarra")) return "pinawarra";
+  return "other";
+}
+
+function toIsoDate(dateStr) {
+  return dateStr ? dateStr.slice(0, 10) : "";
+}
+
+function pickDisplayDate(t) {
+  return t.event_end_date || t.event_start_date;
+}
+
+function tokens(s) {
+  return (s || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean);
+}
+
+function tokenMatches(a, b) {
+  if (a === b) return true;
+  if (/^\d+$/.test(a) || /^\d+$/.test(b)) return false;
+  return a.length >= 3 && b.length >= 3 && (a.indexOf(b) === 0 || b.indexOf(a) === 0);
+}
+
+function nameScore(targetTokens, candidateTokens) {
+  if (targetTokens.length === 0) return 0;
+  var matched = 0;
+  targetTokens.forEach(function (t) {
+    if (candidateTokens.indexOf(t) !== -1 || candidateTokens.some(function (c) { return tokenMatches(t, c); })) {
+      matched++;
+    }
+  });
+  return matched / targetTokens.length;
+}
+
+function closestByDate(candidates, targetDate) {
+  if (candidates.length === 0) return null;
+  if (candidates.length === 1) return candidates[0];
+  var targetTime = new Date(targetDate).getTime();
+  var ranked = candidates
+    .map(function (mt) {
+      var d = toIsoDate(mt.startLocal || mt.startUtc || "");
+      var diff = d ? Math.abs(new Date(d).getTime() - targetTime) : Infinity;
+      return { mt: mt, diff: diff };
+    })
+    .sort(function (a, b) { return a.diff - b.diff; });
+  return ranked[0].mt;
+}
+
+async function fetchAllMatchplayTournaments() {
+  if (!MATCHPLAY_API_TOKEN) return [];
+  var all = [];
+  var page = 1;
+  while (true) {
+    var data = await matchplayGet(`/api/tournaments?owner=${MATCHPLAY_OWNER_ID}&limit=100&page=${page}`);
+    var pageItems = data.data || [];
+    if (!Array.isArray(pageItems) || pageItems.length === 0) break;
+    all = all.concat(pageItems);
+    if (pageItems.length < 100) break;
+    page++;
+    await new Promise((r) => setTimeout(r, 150));
   }
-]
+  console.log(`Fetched ${all.length} Match Play tournaments for owner ${MATCHPLAY_OWNER_ID}.`);
+  return all;
+}
+
+var WEEKDAYS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+
+var ELIMINATION_TYPE_REGEX = /elimination|knockout/i;
+var FINALS_NAME_REGEX = /\bfinal(s)?\b|\btop\s*\d+\b|\bplayoff(s)?\b/i;
+
+var SIDE_EVENT_NAME_REGEX = /\bbest of the rest\b|\bwildcard\b|\bconsolation\b|\bplate\b/i;
+
+function findMatchplayLink(ifpaEvent, matchplayTournaments) {
+  var targetTokens = tokens(ifpaEvent.name);
+
+  var realTournaments = matchplayTournaments.filter(function (mt) {
+    return !mt.test && !/template/i.test(mt.name || "") && !SIDE_EVENT_NAME_REGEX.test(mt.name || "");
+  });
+
+  var targetWeekday = targetTokens.filter(function (t) { return WEEKDAYS.indexOf(t) !== -1; })[0];
+  if (targetWeekday) {
+    realTournaments = realTournaments.filter(function (mt) {
+      return tokens(mt.name).indexOf(targetWeekday) !== -1;
+    });
+  }
+
+  var targetNumbers = targetTokens.filter(function (t) { return /^\d+$/.test(t) && t.length <= 4; });
+  if (targetNumbers.length > 0) {
+    realTournaments = realTournaments.filter(function (mt) {
+      var mtTokens = tokens(mt.name);
+      return targetNumbers.every(function (n) { return mtTokens.indexOf(n) !== -1; });
+    });
+  }
+
+  var scorableTokens = targetTokens.filter(function (t) { return !/^\d{5,}$/.test(t); });
+  var candidates = realTournaments.filter(function (mt) {
+    return nameScore(scorableTokens, tokens(mt.name)) >= 0.7;
+  });
+
+  var qualifierCandidates = candidates.filter(function (mt) {
+    return !ELIMINATION_TYPE_REGEX.test(mt.type || "") && !FINALS_NAME_REGEX.test(mt.name || "");
+  });
+  var pool = qualifierCandidates.length > 0 ? qualifierCandidates : candidates;
+
+  var best = closestByDate(pool, ifpaEvent.date);
+  if (!best || !best.tournamentId) return "";
+  return `${MATCHPLAY_BASE}/tournaments/${best.tournamentId}`;
+}
+
+async function main() {
+  console.log(`Fetching tournament list for director ${DIRECTOR_ID}...`);
+  const dirData = await ifpaGet(`/director/${DIRECTOR_ID}/tournaments/PAST`);
+  const tournaments = dirData.tournaments || [];
+  console.log(`Found ${tournaments.length} past tournaments.`);
+
+  const matchplayTournaments = await fetchAllMatchplayTournaments();
+
+  const events = [];
+
+  for (const t of tournaments) {
+    const id = t.tournament_id;
+    let winner = "";
+    let points = 0;
+
+    try {
+      const resultsData = await ifpaGet(`/tournament/${id}/results`);
+      const results = resultsData.results || [];
+      const first = Array.isArray(results) ? results[0] : null;
+      if (first) {
+        winner = (first.name || "").trim();
+        points = parseFloat(first.points) || 0;
+      }
+    } catch (err) {
+      console.warn(`  Could not fetch results for tournament ${id}: ${err.message}`);
+    }
+
+    const eventName = t.tournament_name || t.event_name;
+    const eventDate = toIsoDate(pickDisplayDate(t));
+
+    events.push({
+      name: eventName,
+      category: classify(eventName || ""),
+      year: new Date(pickDisplayDate(t)).getFullYear(),
+      date: eventDate,
+      players: Number(t.player_count) || 0,
+      winner,
+      points,
+      ifpaLink: `https://www.ifpapinball.com/tournaments/view.php?t=${id}`,
+      matchplayLink: findMatchplayLink({ name: eventName, date: eventDate }, matchplayTournaments)
+    });
+
+    await new Promise((r) => setTimeout(r, 150));
+  }
+
+  fs.writeFileSync("events.json", JSON.stringify(events, null, 2));
+  const linkedCount = events.filter((e) => e.matchplayLink).length;
+  console.log(`Wrote ${events.length} events to events.json (${linkedCount} with a matched Match Play link).`);
+}
+
+main().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});
