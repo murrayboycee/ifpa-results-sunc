@@ -70,8 +70,6 @@ function pickDisplayDate(t) {
   return t.event_end_date || t.event_start_date;
 }
 
-// Word-based name matching, tolerant of abbreviations IFPA/Match Play use
-// inconsistently (e.g. IFPA writes "Seas 4", Match Play writes "Season 4").
 function tokens(s) {
   return (s || "")
     .toLowerCase()
@@ -131,6 +129,7 @@ async function fetchAllMatchplayTournaments() {
 
 var ELIMINATION_TYPE_REGEX = /elimination|knockout/i;
 var FINALS_NAME_REGEX = /\bfinal(s)?\b|\btop\s*\d+\b|\bplayoff(s)?\b/i;
+var WEEKDAYS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
 
 function findMatchplayLink(ifpaEvent, matchplayTournaments) {
   var targetTokens = tokens(ifpaEvent.name);
@@ -138,6 +137,17 @@ function findMatchplayLink(ifpaEvent, matchplayTournaments) {
   var realTournaments = matchplayTournaments.filter(function (mt) {
     return !mt.test && !/template/i.test(mt.name || "");
   });
+
+  // If the IFPA name names a specific day of the week (Monday League vs
+  // Tuesday League run in parallel with near-identical names otherwise),
+  // require an EXACT match on that word first — a fuzzy score alone lets
+  // a wrong-day series through when 5 of 6 words still line up.
+  var targetWeekday = targetTokens.filter(function (t) { return WEEKDAYS.indexOf(t) !== -1; })[0];
+  if (targetWeekday) {
+    realTournaments = realTournaments.filter(function (mt) {
+      return tokens(mt.name).indexOf(targetWeekday) !== -1;
+    });
+  }
 
   var candidates = realTournaments.filter(function (mt) {
     return nameScore(targetTokens, tokens(mt.name)) >= 0.7;
@@ -151,8 +161,6 @@ function findMatchplayLink(ifpaEvent, matchplayTournaments) {
   var best = closestByDate(pool, ifpaEvent.date);
   if (!best || !best.tournamentId) return "";
 
-  // Monday/Tuesday leagues: link the whole series (season) instead of one
-  // week's tournament, if this tournament belongs to a series.
   if ((ifpaEvent.category === "monday" || ifpaEvent.category === "tuesday") && best.seriesId) {
     return `${MATCHPLAY_BASE}/series/${best.seriesId}`;
   }
