@@ -129,12 +129,6 @@ async function fetchAllMatchplayTournaments() {
 
 var WEEKDAYS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
 
-// Match Play sometimes numbers events with Roman numerals instead of
-// Arabic digits (e.g. "Pinawarra XXVIII" for Pinawarra 28, "Pinawarra X
-// Qualifying" for Pinawarra 10). Convert any Roman-numeral-looking token
-// to its Arabic value so number matching still works either way. Capped
-// at 200 and 8 characters to avoid misreading ordinary English words that
-// happen to consist only of the letters I/V/X/L/C/D/M (rare, but possible).
 function romanToInt(s) {
   var map = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };
   s = s.toUpperCase();
@@ -159,19 +153,25 @@ function normalizeRomanTokens(toks) {
 }
 
 // A small number of events use naming so different on Match Play (e.g.
-// "Pinawarra Major" instead of "Pinawarra 12") that no name/number rule
+// "Pinawarra Major" instead of "Pinawarra 24") that no name/number rule
 // can reliably catch them without risking false matches elsewhere. Add
 // entries here as {"<exact IFPA event name>": <matchplay tournamentId>}
 // when you spot one — this always takes priority over automated matching.
+// NOTE: this only works for events that exist in IFPA's own tournament
+// list — if a Match Play tournament has no corresponding IFPA record at
+// all (never submitted/sanctioned), there's no event row to attach a
+// link to, and no override can fix that.
 var MANUAL_MATCHPLAY_OVERRIDES = {
-  "Pinawarra 12": 142643,
   "Pinawarra 24": 191785
 };
 
+// Bracket/knockout stages and side-competitions are never the right link —
+// only the qualifying round itself should ever be used. There is NO
+// fallback to these: if no genuine qualifier match exists, the event is
+// left blank (falls back to the director's profile link) rather than
+// pointing at a Semi Final, Top 8, tiebreaker, or similar.
 var ELIMINATION_TYPE_REGEX = /elimination|knockout/i;
-var FINALS_NAME_REGEX = /\bfinal(s)?\b|\btop\s*\d+\b|\bplayoff(s)?\b/i;
-
-var SIDE_EVENT_NAME_REGEX = /\bbest of the rest\b|\bwildcard\b|\bconsolation\b|\bplate\b|\btie[\s-]?breaker\b|\(\s*\d+(st|nd|rd|th)?\s*-\s*\d+(st|nd|rd|th)?\s*\)/i;
+var NON_QUALIFIER_NAME_REGEX = /\bfinal(s)?\b|\bsemi(s)?(\s*final(s)?)?\b|\bquarter(s)?(\s*final(s)?)?\b|\btop\s*\d+\b|\bplayoff(s)?\b|\bround of \d+\b|\bbest of the rest\b|\bwildcard\b|\bconsolation\b|\bplate\b|\btie[\s-]?breaker\b|\(\s*\d+(st|nd|rd|th)?\s*-\s*\d+(st|nd|rd|th)?\s*\)/i;
 
 function findMatchplayLink(ifpaEvent, matchplayTournaments) {
   if (Object.prototype.hasOwnProperty.call(MANUAL_MATCHPLAY_OVERRIDES, ifpaEvent.name)) {
@@ -181,7 +181,10 @@ function findMatchplayLink(ifpaEvent, matchplayTournaments) {
   var targetTokens = tokens(ifpaEvent.name);
 
   var realTournaments = matchplayTournaments.filter(function (mt) {
-    return !mt.test && !/template/i.test(mt.name || "") && !SIDE_EVENT_NAME_REGEX.test(mt.name || "");
+    return !mt.test
+      && !/template/i.test(mt.name || "")
+      && !NON_QUALIFIER_NAME_REGEX.test(mt.name || "")
+      && !ELIMINATION_TYPE_REGEX.test(mt.type || "");
   });
 
   var targetWeekday = targetTokens.filter(function (t) { return WEEKDAYS.indexOf(t) !== -1; })[0];
@@ -204,12 +207,7 @@ function findMatchplayLink(ifpaEvent, matchplayTournaments) {
     return nameScore(scorableTokens, normalizeRomanTokens(tokens(mt.name))) >= 0.7;
   });
 
-  var qualifierCandidates = candidates.filter(function (mt) {
-    return !ELIMINATION_TYPE_REGEX.test(mt.type || "") && !FINALS_NAME_REGEX.test(mt.name || "");
-  });
-  var pool = qualifierCandidates.length > 0 ? qualifierCandidates : candidates;
-
-  var best = closestByDate(pool, ifpaEvent.date);
+  var best = closestByDate(candidates, ifpaEvent.date);
   if (!best || !best.tournamentId) return "";
 
   if ((ifpaEvent.category === "monday" || ifpaEvent.category === "tuesday") && best.seriesId) {
