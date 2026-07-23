@@ -153,7 +153,8 @@ function normalizeRomanTokens(toks) {
 }
 
 var MANUAL_MATCHPLAY_OVERRIDES = {
-  "Pinawarra 24": 191785
+  "Pinawarra 24": 191785,
+  "Pinawarra 13": 146293
 };
 
 var ELIMINATION_TYPE_REGEX = /elimination|knockout/i;
