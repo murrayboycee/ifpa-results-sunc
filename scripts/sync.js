@@ -148,7 +148,7 @@ function findMatchplayLink(ifpaEvent, matchplayTournaments) {
     });
   }
 
-  var targetNumbers = targetTokens.filter(function (t) { return /^\d+$/.test(t); });
+  var targetNumbers = targetTokens.filter(function (t) { return /^\d+$/.test(t) && t.length <= 4; });
   if (targetNumbers.length > 0) {
     realTournaments = realTournaments.filter(function (mt) {
       var mtTokens = tokens(mt.name);
@@ -156,8 +156,9 @@ function findMatchplayLink(ifpaEvent, matchplayTournaments) {
     });
   }
 
+  var scorableTokens = targetTokens.filter(function (t) { return !/^\d{5,}$/.test(t); });
   var candidates = realTournaments.filter(function (mt) {
-    return nameScore(targetTokens, tokens(mt.name)) >= 0.7;
+    return nameScore(scorableTokens, tokens(mt.name)) >= 0.7;
   });
 
   var qualifierCandidates = candidates.filter(function (mt) {
