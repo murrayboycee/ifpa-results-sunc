@@ -129,6 +129,9 @@ async function fetchAllMatchplayTournaments() {
 
 var WEEKDAYS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
 
+var ELIMINATION_TYPE_REGEX = /elimination|knockout/i;
+var FINALS_NAME_REGEX = /\bfinal(s)?\b|\btop\s*\d+\b|\bplayoff(s)?\b/i;
+
 function findMatchplayLink(ifpaEvent, matchplayTournaments) {
   var targetTokens = tokens(ifpaEvent.name);
 
@@ -155,7 +158,12 @@ function findMatchplayLink(ifpaEvent, matchplayTournaments) {
     return nameScore(targetTokens, tokens(mt.name)) >= 0.7;
   });
 
-  var best = closestByDate(candidates, ifpaEvent.date);
+  var qualifierCandidates = candidates.filter(function (mt) {
+    return !ELIMINATION_TYPE_REGEX.test(mt.type || "") && !FINALS_NAME_REGEX.test(mt.name || "");
+  });
+  var pool = qualifierCandidates.length > 0 ? qualifierCandidates : candidates;
+
+  var best = closestByDate(pool, ifpaEvent.date);
   if (!best || !best.tournamentId) return "";
   return `${MATCHPLAY_BASE}/tournaments/${best.tournamentId}`;
 }
