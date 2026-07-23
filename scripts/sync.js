@@ -3,25 +3,20 @@
 // Pulls this director's tournament list + results from the real IFPA API
 // and writes events.json for the Squarespace widget to fetch().
 //
-// Confirmed against the live OpenAPI spec (api.ifpapinball.com/docs/api.json):
-//   GET /director/{id}/tournaments/{PAST|FUTURE}?api_key=...
+// Confirmed field mapping (from a real API response, 2026-07):
+//   GET /director/{id}/tournaments/PAST?api_key=...
 //     -> { tournaments: [{ tournament_id, tournament_name, event_name,
-//                           city, event_start_date, event_end_date,
-//                           qualifying_format, finals_format, player_count }] }
-//
-// The per-tournament results endpoint (viewTournamentResults) exists at
-// GET /tournament/{id}/results?api_key=... but the spec was too large to
-// pull in full — its exact field names are inferred from the consistent
-// pattern used elsewhere in the API (position, wppr_points, first_name/
-// last_name). FIRST_RUN_DEBUG below prints the raw response for one
-// tournament so we can confirm/adjust field names in one pass if needed.
+//                           event_start_date, event_end_date, player_count, ... }] }
+//   GET /tournament/{id}/results?api_key=...
+//     -> { tournament_id, results: [{ name, position, points, ... }] }
+//        results[] is sorted by position ascending, so results[0] is the winner.
+//        "points" and "position" are returned as strings — cast to number.
 
 const fs = require("fs");
 
 const API_KEY = process.env.IFPA_API_KEY;
 const DIRECTOR_ID = 2909;
 const BASE = "https://api.ifpapinball.com";
-const FIRST_RUN_DEBUG = true; // set to false once field mapping is confirmed
 
 if (!API_KEY) {
   console.error("Missing IFPA_API_KEY environment variable.");
@@ -50,6 +45,13 @@ function toIsoDate(dateStr) {
   return dateStr ? dateStr.slice(0, 10) : "";
 }
 
+// Leagues report event_start_date as the season's first meeting and
+// event_end_date as the last — the director page displays event_end_date
+// as "Date", so we match that for consistency with the public site.
+function pickDisplayDate(t) {
+  return t.event_end_date || t.event_start_date;
+}
+
 async function main() {
   console.log(`Fetching tournament list for director ${DIRECTOR_ID}...`);
   const dirData = await apiGet(`/director/${DIRECTOR_ID}/tournaments/PAST`);
@@ -57,7 +59,6 @@ async function main() {
   console.log(`Found ${tournaments.length} past tournaments.`);
 
   const events = [];
-  let debugged = false;
 
   for (const t of tournaments) {
     const id = t.tournament_id;
@@ -66,23 +67,12 @@ async function main() {
 
     try {
       const resultsData = await apiGet(`/tournament/${id}/results`);
-
-      if (FIRST_RUN_DEBUG && !debugged) {
-        console.log("---- RAW RESPONSE for first tournament (for field-mapping check) ----");
-        console.log(JSON.stringify(resultsData, null, 2).slice(0, 2000));
-        console.log("---- end raw response ----");
-        debugged = true;
-      }
-
-      const results = resultsData.results || resultsData.standings || [];
+      const results = resultsData.results || [];
       const first = Array.isArray(results) ? results[0] : null;
 
       if (first) {
-        winner =
-          first.player_name ||
-          [first.first_name, first.last_name].filter(Boolean).join(" ") ||
-          "";
-        points = first.wppr_points ?? first.current_points ?? first.points ?? 0;
+        winner = (first.name || "").trim();
+        points = parseFloat(first.points) || 0;
       }
     } catch (err) {
       console.warn(`  Could not fetch results for tournament ${id}: ${err.message}`);
@@ -91,9 +81,9 @@ async function main() {
     events.push({
       name: t.tournament_name || t.event_name,
       category: classify(t.tournament_name || ""),
-      year: new Date(t.event_start_date).getFullYear(),
-      date: toIsoDate(t.event_start_date),
-      players: t.player_count || 0,
+      year: new Date(pickDisplayDate(t)).getFullYear(),
+      date: toIsoDate(pickDisplayDate(t)),
+      players: Number(t.player_count) || 0,
       winner,
       points,
       ifpaLink: `https://www.ifpapinball.com/tournaments/view.php?t=${id}`,
