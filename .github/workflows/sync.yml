@@ -23,6 +23,7 @@ jobs:
       - name: Run sync script
         env:
           IFPA_API_KEY: ${{ secrets.IFPA_API_KEY }}
+          MATCHPLAY_API_TOKEN: ${{ secrets.MATCHPLAY_API_TOKEN }}
         run: node scripts/sync.js
 
       - name: Commit updated events.json
