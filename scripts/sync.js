@@ -132,11 +132,13 @@ var WEEKDAYS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturda
 var ELIMINATION_TYPE_REGEX = /elimination|knockout/i;
 var FINALS_NAME_REGEX = /\bfinal(s)?\b|\btop\s*\d+\b|\bplayoff(s)?\b/i;
 
+var SIDE_EVENT_NAME_REGEX = /\bbest of the rest\b|\bwildcard\b|\bconsolation\b|\bplate\b/i;
+
 function findMatchplayLink(ifpaEvent, matchplayTournaments) {
   var targetTokens = tokens(ifpaEvent.name);
 
   var realTournaments = matchplayTournaments.filter(function (mt) {
-    return !mt.test && !/template/i.test(mt.name || "");
+    return !mt.test && !/template/i.test(mt.name || "") && !SIDE_EVENT_NAME_REGEX.test(mt.name || "");
   });
 
   var targetWeekday = targetTokens.filter(function (t) { return WEEKDAYS.indexOf(t) !== -1; })[0];
