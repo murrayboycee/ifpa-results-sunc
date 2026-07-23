@@ -152,26 +152,12 @@ function normalizeRomanTokens(toks) {
   });
 }
 
-// A small number of events use naming so different on Match Play (e.g.
-// "Pinawarra Major" instead of "Pinawarra 24") that no name/number rule
-// can reliably catch them without risking false matches elsewhere. Add
-// entries here as {"<exact IFPA event name>": <matchplay tournamentId>}
-// when you spot one — this always takes priority over automated matching.
-// NOTE: this only works for events that exist in IFPA's own tournament
-// list — if a Match Play tournament has no corresponding IFPA record at
-// all (never submitted/sanctioned), there's no event row to attach a
-// link to, and no override can fix that.
 var MANUAL_MATCHPLAY_OVERRIDES = {
   "Pinawarra 24": 191785
 };
 
-// Bracket/knockout stages and side-competitions are never the right link —
-// only the qualifying round itself should ever be used. There is NO
-// fallback to these: if no genuine qualifier match exists, the event is
-// left blank (falls back to the director's profile link) rather than
-// pointing at a Semi Final, Top 8, tiebreaker, or similar.
 var ELIMINATION_TYPE_REGEX = /elimination|knockout/i;
-var NON_QUALIFIER_NAME_REGEX = /\bfinal(s)?\b|\bsemi(s)?(\s*final(s)?)?\b|\bquarter(s)?(\s*final(s)?)?\b|\btop\s*\d+\b|\bplayoff(s)?\b|\bround of \d+\b|\bbest of the rest\b|\bwildcard\b|\bconsolation\b|\bplate\b|\btie[\s-]?breaker\b|\(\s*\d+(st|nd|rd|th)?\s*-\s*\d+(st|nd|rd|th)?\s*\)/i;
+var NON_QUALIFIER_NAME_REGEX = /\bfinal(s)?\b|\bsemi(s)?(\s*final(s)?)?\b|\bquarter(s)?(\s*final(s)?)?\b|\btop\s*\d+\b|\bplay[\s-]?off(s)?\b|\bround of \d+\b|\bseeding\b|\bbest of the rest\b|\bwildcard\b|\bconsolation\b|\bplate\b|\btie[\s-]?breaker\b|\(?\s*\d+(st|nd|rd|th)?\s*-\s*\d+(st|nd|rd|th)\b\s*\)?/i;
 
 function findMatchplayLink(ifpaEvent, matchplayTournaments) {
   if (Object.prototype.hasOwnProperty.call(MANUAL_MATCHPLAY_OVERRIDES, ifpaEvent.name)) {
