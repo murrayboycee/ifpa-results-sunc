@@ -127,10 +127,6 @@ async function fetchAllMatchplayTournaments() {
   return all;
 }
 
-var ELIMINATION_TYPE_REGEX = /elimination|knockout/i;
-var FINALS_NAME_REGEX = /\bfinal(s)?\b|\btop\s*\d+\b|\bplayoff(s)?\b/i;
-var WEEKDAYS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
-
 function findMatchplayLink(ifpaEvent, matchplayTournaments) {
   var targetTokens = tokens(ifpaEvent.name);
 
@@ -138,33 +134,12 @@ function findMatchplayLink(ifpaEvent, matchplayTournaments) {
     return !mt.test && !/template/i.test(mt.name || "");
   });
 
-  // If the IFPA name names a specific day of the week (Monday League vs
-  // Tuesday League run in parallel with near-identical names otherwise),
-  // require an EXACT match on that word first — a fuzzy score alone lets
-  // a wrong-day series through when 5 of 6 words still line up.
-  var targetWeekday = targetTokens.filter(function (t) { return WEEKDAYS.indexOf(t) !== -1; })[0];
-  if (targetWeekday) {
-    realTournaments = realTournaments.filter(function (mt) {
-      return tokens(mt.name).indexOf(targetWeekday) !== -1;
-    });
-  }
-
   var candidates = realTournaments.filter(function (mt) {
     return nameScore(targetTokens, tokens(mt.name)) >= 0.7;
   });
 
-  var qualifierCandidates = candidates.filter(function (mt) {
-    return !ELIMINATION_TYPE_REGEX.test(mt.type || "") && !FINALS_NAME_REGEX.test(mt.name || "");
-  });
-  var pool = qualifierCandidates.length > 0 ? qualifierCandidates : candidates;
-
-  var best = closestByDate(pool, ifpaEvent.date);
+  var best = closestByDate(candidates, ifpaEvent.date);
   if (!best || !best.tournamentId) return "";
-
-  if ((ifpaEvent.category === "monday" || ifpaEvent.category === "tuesday") && best.seriesId) {
-    return `${MATCHPLAY_BASE}/series/${best.seriesId}`;
-  }
-
   return `${MATCHPLAY_BASE}/tournaments/${best.tournamentId}`;
 }
 
@@ -197,18 +172,17 @@ async function main() {
 
     const eventName = t.tournament_name || t.event_name;
     const eventDate = toIsoDate(pickDisplayDate(t));
-    const eventCategory = classify(eventName || "");
 
     events.push({
       name: eventName,
-      category: eventCategory,
+      category: classify(eventName || ""),
       year: new Date(pickDisplayDate(t)).getFullYear(),
       date: eventDate,
       players: Number(t.player_count) || 0,
       winner,
       points,
       ifpaLink: `https://www.ifpapinball.com/tournaments/view.php?t=${id}`,
-      matchplayLink: findMatchplayLink({ name: eventName, date: eventDate, category: eventCategory }, matchplayTournaments)
+      matchplayLink: findMatchplayLink({ name: eventName, date: eventDate }, matchplayTournaments)
     });
 
     await new Promise((r) => setTimeout(r, 150));
