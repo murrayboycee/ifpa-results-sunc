@@ -341,17 +341,6 @@
     "matchplayLink": "https://app.matchplay.events/tournaments/241457"
   },
   {
-    "name": "Illawarra Women's Masters",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-04-05",
-    "players": 14,
-    "winner": "Pheobe Evans",
-    "points": 6.98,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=112152",
-    "matchplayLink": "https://app.matchplay.events/tournaments/241455"
-  },
-  {
     "name": "Illawarra Masters",
     "category": "other",
     "year": 2026,
@@ -360,6 +349,17 @@
     "winner": "Andrew Gliatis",
     "points": 45.69,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=112151",
+    "matchplayLink": "https://app.matchplay.events/tournaments/241455"
+  },
+  {
+    "name": "Illawarra Women's Masters",
+    "category": "other",
+    "year": 2026,
+    "date": "2026-04-05",
+    "players": 14,
+    "winner": "Pheobe Evans",
+    "points": 6.98,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=112152",
     "matchplayLink": "https://app.matchplay.events/tournaments/241455"
   },
   {
@@ -1155,17 +1155,6 @@
     "matchplayLink": "https://app.matchplay.events/tournaments/188870"
   },
   {
-    "name": "Illawarra Masters Card-based Best Game",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-04-20",
-    "players": 34,
-    "winner": "Paul Jones AUS",
-    "points": 25.87,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=94246",
-    "matchplayLink": "https://app.matchplay.events/tournaments/188320"
-  },
-  {
     "name": "Illawarra Masters Group Matchplay",
     "category": "other",
     "year": 2025,
@@ -1175,6 +1164,17 @@
     "points": 41.88,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=94247",
     "matchplayLink": "https://app.matchplay.events/tournaments/188321"
+  },
+  {
+    "name": "Illawarra Masters Card-based Best Game",
+    "category": "other",
+    "year": 2025,
+    "date": "2025-04-20",
+    "players": 34,
+    "winner": "Paul Jones AUS",
+    "points": 25.87,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=94246",
+    "matchplayLink": "https://app.matchplay.events/tournaments/188320"
   },
   {
     "name": "Illawarra Masters Target Matchplay",
