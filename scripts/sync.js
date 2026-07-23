@@ -129,12 +129,55 @@ async function fetchAllMatchplayTournaments() {
 
 var WEEKDAYS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
 
+// Match Play sometimes numbers events with Roman numerals instead of
+// Arabic digits (e.g. "Pinawarra XXVIII" for Pinawarra 28, "Pinawarra X
+// Qualifying" for Pinawarra 10). Convert any Roman-numeral-looking token
+// to its Arabic value so number matching still works either way. Capped
+// at 200 and 8 characters to avoid misreading ordinary English words that
+// happen to consist only of the letters I/V/X/L/C/D/M (rare, but possible).
+function romanToInt(s) {
+  var map = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };
+  s = s.toUpperCase();
+  var total = 0;
+  for (var i = 0; i < s.length; i++) {
+    var cur = map[s[i]];
+    if (!cur) return null;
+    var next = map[s[i + 1]];
+    total += next && cur < next ? -cur : cur;
+  }
+  return total;
+}
+
+function normalizeRomanTokens(toks) {
+  return toks.map(function (t) {
+    if (/^[ivxlcdm]+$/i.test(t) && t.length <= 8) {
+      var val = romanToInt(t);
+      if (val && val > 0 && val <= 200) return String(val);
+    }
+    return t;
+  });
+}
+
+// A small number of events use naming so different on Match Play (e.g.
+// "Pinawarra Major" instead of "Pinawarra 12") that no name/number rule
+// can reliably catch them without risking false matches elsewhere. Add
+// entries here as {"<exact IFPA event name>": <matchplay tournamentId>}
+// when you spot one — this always takes priority over automated matching.
+var MANUAL_MATCHPLAY_OVERRIDES = {
+  "Pinawarra 12": 142643,
+  "Pinawarra 24": 191785
+};
+
 var ELIMINATION_TYPE_REGEX = /elimination|knockout/i;
 var FINALS_NAME_REGEX = /\bfinal(s)?\b|\btop\s*\d+\b|\bplayoff(s)?\b/i;
 
 var SIDE_EVENT_NAME_REGEX = /\bbest of the rest\b|\bwildcard\b|\bconsolation\b|\bplate\b|\btie[\s-]?breaker\b|\(\s*\d+(st|nd|rd|th)?\s*-\s*\d+(st|nd|rd|th)?\s*\)/i;
 
 function findMatchplayLink(ifpaEvent, matchplayTournaments) {
+  if (Object.prototype.hasOwnProperty.call(MANUAL_MATCHPLAY_OVERRIDES, ifpaEvent.name)) {
+    return `${MATCHPLAY_BASE}/tournaments/${MANUAL_MATCHPLAY_OVERRIDES[ifpaEvent.name]}`;
+  }
+
   var targetTokens = tokens(ifpaEvent.name);
 
   var realTournaments = matchplayTournaments.filter(function (mt) {
@@ -151,14 +194,14 @@ function findMatchplayLink(ifpaEvent, matchplayTournaments) {
   var targetNumbers = targetTokens.filter(function (t) { return /^\d+$/.test(t) && t.length <= 4; });
   if (targetNumbers.length > 0) {
     realTournaments = realTournaments.filter(function (mt) {
-      var mtTokens = tokens(mt.name);
+      var mtTokens = normalizeRomanTokens(tokens(mt.name));
       return targetNumbers.every(function (n) { return mtTokens.indexOf(n) !== -1; });
     });
   }
 
   var scorableTokens = targetTokens.filter(function (t) { return !/^\d{5,}$/.test(t); });
   var candidates = realTournaments.filter(function (mt) {
-    return nameScore(scorableTokens, tokens(mt.name)) >= 0.7;
+    return nameScore(scorableTokens, normalizeRomanTokens(tokens(mt.name))) >= 0.7;
   });
 
   var qualifierCandidates = candidates.filter(function (mt) {
