@@ -132,7 +132,7 @@ var WEEKDAYS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturda
 var ELIMINATION_TYPE_REGEX = /elimination|knockout/i;
 var FINALS_NAME_REGEX = /\bfinal(s)?\b|\btop\s*\d+\b|\bplayoff(s)?\b/i;
 
-var SIDE_EVENT_NAME_REGEX = /\bbest of the rest\b|\bwildcard\b|\bconsolation\b|\bplate\b/i;
+var SIDE_EVENT_NAME_REGEX = /\bbest of the rest\b|\bwildcard\b|\bconsolation\b|\bplate\b|\btie[\s-]?breaker\b|\(\s*\d+(st|nd|rd|th)?\s*-\s*\d+(st|nd|rd|th)?\s*\)/i;
 
 function findMatchplayLink(ifpaEvent, matchplayTournaments) {
   var targetTokens = tokens(ifpaEvent.name);
@@ -169,8 +169,6 @@ function findMatchplayLink(ifpaEvent, matchplayTournaments) {
   var best = closestByDate(pool, ifpaEvent.date);
   if (!best || !best.tournamentId) return "";
 
-  // Monday/Tuesday leagues: link the whole series (season) instead of one
-  // week's tournament, since the league spans many weeks under one series.
   if ((ifpaEvent.category === "monday" || ifpaEvent.category === "tuesday") && best.seriesId) {
     return `${MATCHPLAY_BASE}/series/${best.seriesId}`;
   }
