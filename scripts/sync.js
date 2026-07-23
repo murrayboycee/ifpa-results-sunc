@@ -136,6 +136,11 @@ async function fetchAllMatchplayTournaments() {
   return all;
 }
 
+// Elimination/knockout bracket formats (finals stages), as opposed to
+// qualifying formats like group_matchplay, max_matchplay, best_game, etc.
+var ELIMINATION_TYPE_REGEX = /elimination|knockout/i;
+var FINALS_NAME_REGEX = /\bfinal(s)?\b|\btop\s*\d+\b|\bplayoff(s)?\b/i;
+
 function findMatchplayLink(ifpaEvent, matchplayTournaments) {
   var targetTokens = tokens(ifpaEvent.name);
 
@@ -151,11 +156,26 @@ function findMatchplayLink(ifpaEvent, matchplayTournaments) {
     return nameScore(targetTokens, tokens(mt.name)) >= 0.7;
   });
 
+  // For events that run as qualifying + separate finals bracket (Pinawarra,
+  // Flip Frenzy), prefer the qualifier over the finals/top-8/top-16 stage —
+  // only fall back to a finals-stage match if no qualifier candidate exists.
+  var qualifierCandidates = candidates.filter(function (mt) {
+    return !ELIMINATION_TYPE_REGEX.test(mt.type || "") && !FINALS_NAME_REGEX.test(mt.name || "");
+  });
+  var pool = qualifierCandidates.length > 0 ? qualifierCandidates : candidates;
+
   // If nothing matched by name, don't guess by date alone across all 800+
   // tournaments — leaving it blank (falls back to the profile link) is
   // safer than risking a link to the wrong event.
-  var best = closestByDate(candidates, ifpaEvent.date);
+  var best = closestByDate(pool, ifpaEvent.date);
   if (!best || !best.tournamentId) return "";
+
+  // Monday leagues: link the whole series (season) instead of one week's
+  // tournament, if this tournament belongs to a series.
+  if (ifpaEvent.category === "monday" && best.seriesId) {
+    return `${MATCHPLAY_BASE}/series/${best.seriesId}`;
+  }
+
   return `${MATCHPLAY_BASE}/tournaments/${best.tournamentId}`;
 }
 
@@ -188,17 +208,18 @@ async function main() {
 
     const eventName = t.tournament_name || t.event_name;
     const eventDate = toIsoDate(pickDisplayDate(t));
+    const eventCategory = classify(eventName || "");
 
     events.push({
       name: eventName,
-      category: classify(eventName || ""),
+      category: eventCategory,
       year: new Date(pickDisplayDate(t)).getFullYear(),
       date: eventDate,
       players: Number(t.player_count) || 0,
       winner,
       points,
       ifpaLink: `https://www.ifpapinball.com/tournaments/view.php?t=${id}`,
-      matchplayLink: findMatchplayLink({ name: eventName, date: eventDate }, matchplayTournaments)
+      matchplayLink: findMatchplayLink({ name: eventName, date: eventDate, category: eventCategory }, matchplayTournaments)
     });
 
     await new Promise((r) => setTimeout(r, 150));
