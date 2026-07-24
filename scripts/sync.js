@@ -273,15 +273,25 @@ async function fetchLatestMachines(all) {
     return [];
   }
 
+  const today = toIsoDate(new Date().toISOString());
+
   const real = all.filter((mt) => !mt.test && !/template/i.test(mt.name || ""));
 
   const leagueNights = real.filter((mt) => {
     const n = tokens(mt.name);
-    return (n.indexOf("monday") !== -1 || n.indexOf("tuesday") !== -1) && n.indexOf("league") !== -1;
+    const isLeague = (n.indexOf("monday") !== -1 || n.indexOf("tuesday") !== -1) && n.indexOf("league") !== -1;
+    if (!isLeague) return false;
+    // Only consider nights that have actually happened — Match Play's
+    // tournament list includes future scheduled weeks too (status
+    // "planned"), and those don't have real arena data yet. A pure
+    // "latest date" sort would otherwise grab next week instead of the
+    // most recent one that was actually played.
+    const isPast = mt.status === "completed" || toIsoDate(mt.startLocal || mt.startUtc || "") <= today;
+    return isPast;
   });
 
   if (leagueNights.length === 0) {
-    console.warn("Could not find any Monday/Tuesday league tournaments to pull machines from.");
+    console.warn("Could not find any past Monday/Tuesday league tournaments to pull machines from.");
     return [];
   }
 
@@ -292,15 +302,16 @@ async function fetchLatestMachines(all) {
   });
 
   const latest = leagueNights[0];
-  console.log(`Pulling machine list from: "${latest.name}" (${toIsoDate(latest.startLocal || latest.startUtc || "")})`);
+  console.log(`Pulling machine list from: "${latest.name}" (${toIsoDate(latest.startLocal || latest.startUtc || "")}, status: ${latest.status})`);
 
   const detail = await matchplayGet(`/api/tournaments/${latest.tournamentId}?includeArenas=true`);
+  const tournamentObj = detail.data || detail;
 
   console.log("---- RAW ARENA RESPONSE (for field-mapping check) ----");
-  console.log(JSON.stringify(detail.arenas || detail, null, 2).slice(0, 2000));
+  console.log(JSON.stringify(tournamentObj.arenas, null, 2).slice(0, 2000));
   console.log("---- end raw response ----");
 
-  const arenas = detail.arenas || [];
+  const arenas = tournamentObj.arenas || [];
   const names = arenas
     .map((a) => (a.name || a.arenaName || "").trim())
     .filter(Boolean)
