@@ -171,7 +171,7 @@
     "date": "2026-06-01",
     "players": 23,
     "winner": "Ron Lengling",
-    "points": 22.84,
+    "points": 22.8,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=113983",
     "matchplayLink": "https://app.matchplay.events/series/5818"
   },
@@ -418,17 +418,6 @@
     "matchplayLink": "https://app.matchplay.events/tournaments/241443"
   },
   {
-    "name": "ACS Best Game (Side Comp)",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-03-22",
-    "players": 128,
-    "winner": "Escher Lefkoff",
-    "points": 62.01,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111652",
-    "matchplayLink": "https://app.matchplay.events/tournaments/240366"
-  },
-  {
     "name": "ACS Strikes (Side Comp)",
     "category": "other",
     "year": 2026,
@@ -438,6 +427,17 @@
     "points": 40.39,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111651",
     "matchplayLink": "https://app.matchplay.events/tournaments/240363"
+  },
+  {
+    "name": "ACS Best Game (Side Comp)",
+    "category": "other",
+    "year": 2026,
+    "date": "2026-03-22",
+    "players": 128,
+    "winner": "Escher Lefkoff",
+    "points": 62.01,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111652",
+    "matchplayLink": "https://app.matchplay.events/tournaments/240366"
   },
   {
     "name": "Target Matchplay (ACS Side Comp). ",
