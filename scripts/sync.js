@@ -70,6 +70,8 @@ function pickDisplayDate(t) {
   return t.event_end_date || t.event_start_date;
 }
 
+// Word-based name matching, tolerant of abbreviations IFPA/Match Play use
+// inconsistently (e.g. IFPA writes "Seas 4", Match Play writes "Season 4").
 function tokens(s) {
   return (s || "")
     .toLowerCase()
@@ -79,12 +81,17 @@ function tokens(s) {
     .filter(Boolean);
 }
 
+// Two tokens are considered a match if identical, or if one is a prefix of
+// the other (handles Seas/Season, Tues/Tuesday, etc.) — except numbers,
+// which must match exactly since they usually carry the most meaning
+// (season number, year).
 function tokenMatches(a, b) {
   if (a === b) return true;
   if (/^\d+$/.test(a) || /^\d+$/.test(b)) return false;
   return a.length >= 3 && b.length >= 3 && (a.indexOf(b) === 0 || b.indexOf(a) === 0);
 }
 
+// Fraction of the IFPA event's name-words found (loosely) in a candidate's name.
 function nameScore(targetTokens, candidateTokens) {
   if (targetTokens.length === 0) return 0;
   var matched = 0;
@@ -96,6 +103,8 @@ function nameScore(targetTokens, candidateTokens) {
   return matched / targetTokens.length;
 }
 
+// Among several same-name candidates (e.g. many "Flip Frenzy" entries),
+// pick whichever has the closest date to the IFPA event's date.
 function closestByDate(candidates, targetDate) {
   if (candidates.length === 0) return null;
   if (candidates.length === 1) return candidates[0];
@@ -129,6 +138,12 @@ async function fetchAllMatchplayTournaments() {
 
 var WEEKDAYS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
 
+// Match Play sometimes numbers events with Roman numerals instead of
+// Arabic digits (e.g. "Pinawarra XXVIII" for Pinawarra 28, "Pinawarra X
+// Qualifying" for Pinawarra 10). Convert any Roman-numeral-looking token
+// to its Arabic value so number matching still works either way. Capped
+// at 200 and 8 characters to avoid misreading ordinary English words that
+// happen to consist only of the letters I/V/X/L/C/D/M (rare, but possible).
 function romanToInt(s) {
   var map = { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 };
   s = s.toUpperCase();
@@ -152,11 +167,26 @@ function normalizeRomanTokens(toks) {
   });
 }
 
+// A small number of events use naming so different on Match Play (e.g.
+// "Pinawarra Major" instead of "Pinawarra 24") that no name/number rule
+// can reliably catch them without risking false matches elsewhere. Add
+// entries here as {"<exact IFPA event name>": <matchplay tournamentId>}
+// when you spot one — this always takes priority over automated matching.
+// NOTE: this only works for events that exist in IFPA's own tournament
+// list — if a Match Play tournament has no corresponding IFPA record at
+// all (never submitted/sanctioned), there's no event row to attach a
+// link to, and no override can fix that.
 var MANUAL_MATCHPLAY_OVERRIDES = {
   "Pinawarra 24": 191785,
   "Pinawarra 13": 146293
 };
 
+// Bracket/knockout stages and side-competitions are never the right link —
+// only the qualifying round itself should ever be used. Unlike an earlier
+// version of this logic, there is NO fallback to these: if no genuine
+// qualifier match exists, the event is left blank (falls back to the
+// director's profile link) rather than pointing at a Semi Final, Top 8,
+// tiebreaker, or similar.
 var ELIMINATION_TYPE_REGEX = /elimination|knockout/i;
 var NON_QUALIFIER_NAME_REGEX = /\bfinal(s)?\b|\bsemi(s)?(\s*final(s)?)?\b|\bquarter(s)?(\s*final(s)?)?\b|\btop\s*\d+\b|\bplay[\s-]?off(s)?\b|\bround of \d+\b|\bseeding\b|\bbest of the rest\b|\bwildcard\b|\bconsolation\b|\bplate\b|\btie[\s-]?breaker\b|\(?\s*\d+(st|nd|rd|th)?\s*-\s*\d+(st|nd|rd|th)\b\s*\)?/i;
 
@@ -167,6 +197,9 @@ function findMatchplayLink(ifpaEvent, matchplayTournaments) {
 
   var targetTokens = tokens(ifpaEvent.name);
 
+  // Exclude test/template tournaments — these show up in the owner's list
+  // but were never actually played and shouldn't be matched to real events.
+  // Also exclude side/consolation events (e.g. "Best of the Rest") entirely.
   var realTournaments = matchplayTournaments.filter(function (mt) {
     return !mt.test
       && !/template/i.test(mt.name || "")
@@ -174,6 +207,10 @@ function findMatchplayLink(ifpaEvent, matchplayTournaments) {
       && !ELIMINATION_TYPE_REGEX.test(mt.type || "");
   });
 
+  // If the IFPA name names a specific day of the week (Monday League vs
+  // Tuesday League run in parallel with near-identical names otherwise),
+  // require an EXACT match on that word first — a fuzzy score alone lets
+  // a wrong-day tournament through when 5 of 6 words still line up.
   var targetWeekday = targetTokens.filter(function (t) { return WEEKDAYS.indexOf(t) !== -1; })[0];
   if (targetWeekday) {
     realTournaments = realTournaments.filter(function (mt) {
@@ -181,6 +218,16 @@ function findMatchplayLink(ifpaEvent, matchplayTournaments) {
     });
   }
 
+  // Same problem with numbers (season number, year, event number): a fuzzy
+  // score alone lets "Season 5" match an IFPA event for "Season 4" through,
+  // because only 1 of 6 words differs. Numbers carry the most distinguishing
+  // meaning here, so every number in the IFPA name must appear EXACTLY in
+  // the candidate — not just count toward an overall percentage.
+  // EXCEPTION: IFPA sometimes encodes the date into the name itself, e.g.
+  // "Flip Frenzy 160726" for 16/07/26 — that's not a real identifier and
+  // won't appear literally in Match Play's name, so long digit strings
+  // (5+ digits) are left out of this check and handled by date-closeness
+  // matching instead, the same way plain "Flip Frenzy" (no number) already is.
   var targetNumbers = targetTokens.filter(function (t) { return /^\d+$/.test(t) && t.length <= 4; });
   if (targetNumbers.length > 0) {
     realTournaments = realTournaments.filter(function (mt) {
@@ -189,19 +236,81 @@ function findMatchplayLink(ifpaEvent, matchplayTournaments) {
     });
   }
 
+  // Require most (70%+) of the IFPA name's meaningful words to appear in
+  // the Match Play tournament's name, tolerant of abbreviations. Long
+  // digit-string tokens (date codes, see above) are excluded here too —
+  // otherwise a name like "Flip Frenzy 160726" only scores 2/3 (67%) since
+  // that code will never appear in Match Play's name, dropping it below
+  // the threshold even though "Flip" and "Frenzy" both matched.
   var scorableTokens = targetTokens.filter(function (t) { return !/^\d{5,}$/.test(t); });
   var candidates = realTournaments.filter(function (mt) {
     return nameScore(scorableTokens, normalizeRomanTokens(tokens(mt.name))) >= 0.7;
   });
 
+  // If nothing matched by name, don't guess by date alone across all 800+
+  // tournaments — leaving it blank (falls back to the profile link) is
+  // safer than risking a link to the wrong event.
   var best = closestByDate(candidates, ifpaEvent.date);
   if (!best || !best.tournamentId) return "";
 
+  // Monday/Tuesday leagues: link the whole series (season) instead of one
+  // week's tournament, since the league spans many weeks under one series.
   if ((ifpaEvent.category === "monday" || ifpaEvent.category === "tuesday") && best.seriesId) {
     return `${MATCHPLAY_BASE}/series/${best.seriesId}`;
   }
 
   return `${MATCHPLAY_BASE}/tournaments/${best.tournamentId}`;
+}
+
+// Finds the most recent real (non-test) Monday or Tuesday league night on
+// Match Play and fetches its arena list — this is what actually maps to
+// "which machines are currently in the lineup", since the weekly league
+// reflects the current machine set better than a special event like
+// Pinawarra (which sometimes runs on an expanded/different selection).
+async function fetchLatestMachines(all) {
+  if (!MATCHPLAY_API_TOKEN) {
+    console.warn("Missing MATCHPLAY_API_TOKEN — skipping machines.json.");
+    return [];
+  }
+
+  const real = all.filter((mt) => !mt.test && !/template/i.test(mt.name || ""));
+
+  const leagueNights = real.filter((mt) => {
+    const n = tokens(mt.name);
+    return (n.indexOf("monday") !== -1 || n.indexOf("tuesday") !== -1) && n.indexOf("league") !== -1;
+  });
+
+  if (leagueNights.length === 0) {
+    console.warn("Could not find any Monday/Tuesday league tournaments to pull machines from.");
+    return [];
+  }
+
+  leagueNights.sort((a, b) => {
+    const da = toIsoDate(a.startLocal || a.startUtc || "");
+    const db = toIsoDate(b.startLocal || b.startUtc || "");
+    return da < db ? 1 : -1;
+  });
+
+  const latest = leagueNights[0];
+  console.log(`Pulling machine list from: "${latest.name}" (${toIsoDate(latest.startLocal || latest.startUtc || "")})`);
+
+  const detail = await matchplayGet(`/api/tournaments/${latest.tournamentId}?includeArenas=true`);
+
+  console.log("---- RAW ARENA RESPONSE (for field-mapping check) ----");
+  console.log(JSON.stringify(detail.arenas || detail, null, 2).slice(0, 2000));
+  console.log("---- end raw response ----");
+
+  const arenas = detail.arenas || [];
+  const names = arenas
+    .map((a) => (a.name || a.arenaName || "").trim())
+    .filter(Boolean)
+    .sort((a, b) => a.localeCompare(b));
+
+  return {
+    sourceName: latest.name,
+    sourceDate: toIsoDate(latest.startLocal || latest.startUtc || ""),
+    machines: names
+  };
 }
 
 async function main() {
@@ -253,6 +362,14 @@ async function main() {
   fs.writeFileSync("events.json", JSON.stringify(events, null, 2));
   const linkedCount = events.filter((e) => e.matchplayLink).length;
   console.log(`Wrote ${events.length} events to events.json (${linkedCount} with a matched Match Play link).`);
+
+  try {
+    const machinesData = await fetchLatestMachines(matchplayTournaments);
+    fs.writeFileSync("machines.json", JSON.stringify(machinesData, null, 2));
+    console.log(`Wrote ${machinesData.machines ? machinesData.machines.length : 0} machines to machines.json.`);
+  } catch (err) {
+    console.warn(`Could not update machines.json: ${err.message}`);
+  }
 }
 
 main().catch((err) => {
