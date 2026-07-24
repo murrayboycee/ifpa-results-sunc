@@ -313,9 +313,12 @@ async function fetchLatestMachines(all) {
 
   const arenas = tournamentObj.arenas || [];
   const names = arenas
-    .map((a) => (a.name || a.arenaName || "").trim())
-    .filter(Boolean)
-    .sort((a, b) => a.localeCompare(b));
+    .map((a) => ({
+      name: (a.name || a.arenaName || "").trim(),
+      active: (a.status || "").toLowerCase() === "active"
+    }))
+    .filter((m) => m.name)
+    .sort((a, b) => a.name.localeCompare(b.name));
 
   return {
     sourceName: latest.name,
