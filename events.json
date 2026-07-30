@@ -1,5 +1,27 @@
 [
   {
+    "name": "Iron Maidens 18",
+    "category": "other",
+    "year": 2026,
+    "date": "2026-07-26",
+    "players": 13,
+    "winner": "Susie Morgan",
+    "points": 3.27,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=114929",
+    "matchplayLink": "https://app.matchplay.events/tournaments/263217"
+  },
+  {
+    "name": "Shoalhaven League Season 4 2026",
+    "category": "other",
+    "year": 2026,
+    "date": "2026-07-22",
+    "players": 19,
+    "winner": "Stuart Hunt",
+    "points": 14.12,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=116076",
+    "matchplayLink": "https://app.matchplay.events/tournaments/258575"
+  },
+  {
     "name": "Illawarra Tuesday League Seas 4 2026",
     "category": "tuesday",
     "year": 2026,
@@ -418,17 +440,6 @@
     "matchplayLink": "https://app.matchplay.events/tournaments/241443"
   },
   {
-    "name": "ACS Strikes (Side Comp)",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-03-22",
-    "players": 105,
-    "winner": "Peter Menzel",
-    "points": 40.39,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111651",
-    "matchplayLink": "https://app.matchplay.events/tournaments/240363"
-  },
-  {
     "name": "ACS Best Game (Side Comp)",
     "category": "other",
     "year": 2026,
@@ -438,6 +449,17 @@
     "points": 62.01,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111652",
     "matchplayLink": "https://app.matchplay.events/tournaments/240366"
+  },
+  {
+    "name": "ACS Strikes (Side Comp)",
+    "category": "other",
+    "year": 2026,
+    "date": "2026-03-22",
+    "players": 105,
+    "winner": "Peter Menzel",
+    "points": 40.39,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111651",
+    "matchplayLink": "https://app.matchplay.events/tournaments/240363"
   },
   {
     "name": "Target Matchplay (ACS Side Comp). ",
