@@ -6,7 +6,7 @@
     "date": "2026-07-30",
     "players": 18,
     "winner": "Corey Hackett",
-    "points": 0,
+    "points": 7.19,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=116329",
     "matchplayLink": "https://app.matchplay.events/tournaments/260162"
   },
@@ -451,17 +451,6 @@
     "matchplayLink": "https://app.matchplay.events/tournaments/241443"
   },
   {
-    "name": "ACS Best Game (Side Comp)",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-03-22",
-    "players": 128,
-    "winner": "Escher Lefkoff",
-    "points": 62.01,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111652",
-    "matchplayLink": "https://app.matchplay.events/tournaments/240366"
-  },
-  {
     "name": "ACS Strikes (Side Comp)",
     "category": "other",
     "year": 2026,
@@ -471,6 +460,17 @@
     "points": 40.39,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111651",
     "matchplayLink": "https://app.matchplay.events/tournaments/240363"
+  },
+  {
+    "name": "ACS Best Game (Side Comp)",
+    "category": "other",
+    "year": 2026,
+    "date": "2026-03-22",
+    "players": 128,
+    "winner": "Escher Lefkoff",
+    "points": 62.01,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111652",
+    "matchplayLink": "https://app.matchplay.events/tournaments/240366"
   },
   {
     "name": "Target Matchplay (ACS Side Comp). ",
@@ -1188,17 +1188,6 @@
     "matchplayLink": ""
   },
   {
-    "name": "Illawarra Masters Group Matchplay",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-04-20",
-    "players": 38,
-    "winner": "Andrew Gliatis",
-    "points": 41.88,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=94247",
-    "matchplayLink": "https://app.matchplay.events/tournaments/188321"
-  },
-  {
     "name": "Illawarra Masters Card-based Best Game",
     "category": "other",
     "year": 2025,
@@ -1208,6 +1197,17 @@
     "points": 25.87,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=94246",
     "matchplayLink": "https://app.matchplay.events/tournaments/188320"
+  },
+  {
+    "name": "Illawarra Masters Group Matchplay",
+    "category": "other",
+    "year": 2025,
+    "date": "2025-04-20",
+    "players": 38,
+    "winner": "Andrew Gliatis",
+    "points": 41.88,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=94247",
+    "matchplayLink": "https://app.matchplay.events/tournaments/188321"
   },
   {
     "name": "Illawarra Masters Target Matchplay",
