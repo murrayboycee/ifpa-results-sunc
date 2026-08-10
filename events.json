@@ -1,5 +1,38 @@
 [
   {
+    "name": "IPO Strikes",
+    "category": "other",
+    "year": 2026,
+    "date": "2026-08-09",
+    "players": 45,
+    "winner": "Sue Hantzi",
+    "points": 19.06,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=117759",
+    "matchplayLink": ""
+  },
+  {
+    "name": "Illawarra Pinball Open",
+    "category": "other",
+    "year": 2026,
+    "date": "2026-08-09",
+    "players": 85,
+    "winner": "Pat Nichols",
+    "points": 107.58,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=117761",
+    "matchplayLink": "https://app.matchplay.events/tournaments/263673"
+  },
+  {
+    "name": "Pinawarra 39",
+    "category": "pinawarra",
+    "year": 2026,
+    "date": "2026-08-07",
+    "players": 61,
+    "winner": "Josh Burke",
+    "points": 75.74,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=117760",
+    "matchplayLink": "https://app.matchplay.events/tournaments/265578"
+  },
+  {
     "name": "Flip Frenzy 300726",
     "category": "flipfrenzy",
     "year": 2026,
