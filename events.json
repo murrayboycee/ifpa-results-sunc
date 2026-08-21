@@ -11,17 +11,6 @@
     "matchplayLink": "https://app.matchplay.events/tournaments/266210"
   },
   {
-    "name": "Illawarra Pinball Open",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-08-09",
-    "players": 85,
-    "winner": "Pat Nichols",
-    "points": 107.39,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=117761",
-    "matchplayLink": "https://app.matchplay.events/tournaments/263673"
-  },
-  {
     "name": "IPO Strikes",
     "category": "other",
     "year": 2026,
@@ -31,6 +20,17 @@
     "points": 19.04,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=117759",
     "matchplayLink": ""
+  },
+  {
+    "name": "Illawarra Pinball Open",
+    "category": "other",
+    "year": 2026,
+    "date": "2026-08-09",
+    "players": 85,
+    "winner": "Pat Nichols",
+    "points": 107.39,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=117761",
+    "matchplayLink": "https://app.matchplay.events/tournaments/263673"
   },
   {
     "name": "Pinawarra 39",
