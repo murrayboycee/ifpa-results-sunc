@@ -1,5 +1,16 @@
 [
   {
+    "name": "Illawarra Frenzy",
+    "category": "flipfrenzy",
+    "year": 2026,
+    "date": "2026-08-23",
+    "players": 16,
+    "winner": "Kurt Basedow",
+    "points": 9.21,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=119768",
+    "matchplayLink": "https://app.matchplay.events/tournaments/260166"
+  },
+  {
     "name": "Flip Frenzy 130826",
     "category": "flipfrenzy",
     "year": 2026,
@@ -418,17 +429,6 @@
     "matchplayLink": ""
   },
   {
-    "name": "Illawarra Women's Masters",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-04-05",
-    "players": 14,
-    "winner": "Pheobe Evans",
-    "points": 6.98,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=112152",
-    "matchplayLink": "https://app.matchplay.events/tournaments/241455"
-  },
-  {
     "name": "Illawarra Masters",
     "category": "other",
     "year": 2026,
@@ -437,6 +437,17 @@
     "winner": "Andrew Gliatis",
     "points": 45.69,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=112151",
+    "matchplayLink": "https://app.matchplay.events/tournaments/241455"
+  },
+  {
+    "name": "Illawarra Women's Masters",
+    "category": "other",
+    "year": 2026,
+    "date": "2026-04-05",
+    "players": 14,
+    "winner": "Pheobe Evans",
+    "points": 6.98,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=112152",
     "matchplayLink": "https://app.matchplay.events/tournaments/241455"
   },
   {
