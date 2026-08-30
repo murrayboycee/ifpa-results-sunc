@@ -1,5 +1,16 @@
 [
   {
+    "name": "Flip Frenzy 270826",
+    "category": "flipfrenzy",
+    "year": 2026,
+    "date": "2026-08-27",
+    "players": 14,
+    "winner": "JayTee Saward",
+    "points": 0,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=116335",
+    "matchplayLink": "https://app.matchplay.events/tournaments/269121"
+  },
+  {
     "name": "Illawarra Frenzy",
     "category": "flipfrenzy",
     "year": 2026,
@@ -39,7 +50,7 @@
     "date": "2026-08-09",
     "players": 85,
     "winner": "Pat Nichols",
-    "points": 107.39,
+    "points": 107.4,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=117761",
     "matchplayLink": "https://app.matchplay.events/tournaments/263673"
   },
@@ -50,7 +61,7 @@
     "date": "2026-08-07",
     "players": 61,
     "winner": "Josh Burke",
-    "points": 75.63,
+    "points": 75.64,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=117760",
     "matchplayLink": "https://app.matchplay.events/tournaments/265578"
   },
@@ -429,17 +440,6 @@
     "matchplayLink": ""
   },
   {
-    "name": "Illawarra Masters",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-04-05",
-    "players": 37,
-    "winner": "Andrew Gliatis",
-    "points": 45.69,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=112151",
-    "matchplayLink": "https://app.matchplay.events/tournaments/241455"
-  },
-  {
     "name": "Illawarra Women's Masters",
     "category": "other",
     "year": 2026,
@@ -448,6 +448,17 @@
     "winner": "Pheobe Evans",
     "points": 6.98,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=112152",
+    "matchplayLink": "https://app.matchplay.events/tournaments/241455"
+  },
+  {
+    "name": "Illawarra Masters",
+    "category": "other",
+    "year": 2026,
+    "date": "2026-04-05",
+    "players": 37,
+    "winner": "Andrew Gliatis",
+    "points": 45.69,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=112151",
     "matchplayLink": "https://app.matchplay.events/tournaments/241455"
   },
   {
@@ -506,17 +517,6 @@
     "matchplayLink": "https://app.matchplay.events/tournaments/241443"
   },
   {
-    "name": "ACS Strikes (Side Comp)",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-03-22",
-    "players": 105,
-    "winner": "Peter Menzel",
-    "points": 40.39,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111651",
-    "matchplayLink": "https://app.matchplay.events/tournaments/240363"
-  },
-  {
     "name": "ACS Best Game (Side Comp)",
     "category": "other",
     "year": 2026,
@@ -526,6 +526,17 @@
     "points": 62.01,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111652",
     "matchplayLink": "https://app.matchplay.events/tournaments/240366"
+  },
+  {
+    "name": "ACS Strikes (Side Comp)",
+    "category": "other",
+    "year": 2026,
+    "date": "2026-03-22",
+    "players": 105,
+    "winner": "Peter Menzel",
+    "points": 40.39,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111651",
+    "matchplayLink": "https://app.matchplay.events/tournaments/240363"
   },
   {
     "name": "Target Matchplay (ACS Side Comp). ",
