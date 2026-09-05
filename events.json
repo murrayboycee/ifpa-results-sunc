@@ -17,7 +17,7 @@
     "date": "2026-08-23",
     "players": 16,
     "winner": "Kurt Basedow",
-    "points": 9.21,
+    "points": 9.22,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=119768",
     "matchplayLink": "https://app.matchplay.events/tournaments/260166"
   },
@@ -440,17 +440,6 @@
     "matchplayLink": ""
   },
   {
-    "name": "Illawarra Women's Masters",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-04-05",
-    "players": 14,
-    "winner": "Pheobe Evans",
-    "points": 6.98,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=112152",
-    "matchplayLink": "https://app.matchplay.events/tournaments/241455"
-  },
-  {
     "name": "Illawarra Masters",
     "category": "other",
     "year": 2026,
@@ -459,6 +448,17 @@
     "winner": "Andrew Gliatis",
     "points": 45.69,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=112151",
+    "matchplayLink": "https://app.matchplay.events/tournaments/241455"
+  },
+  {
+    "name": "Illawarra Women's Masters",
+    "category": "other",
+    "year": 2026,
+    "date": "2026-04-05",
+    "players": 14,
+    "winner": "Pheobe Evans",
+    "points": 6.98,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=112152",
     "matchplayLink": "https://app.matchplay.events/tournaments/241455"
   },
   {
@@ -517,17 +517,6 @@
     "matchplayLink": "https://app.matchplay.events/tournaments/241443"
   },
   {
-    "name": "ACS Best Game (Side Comp)",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-03-22",
-    "players": 128,
-    "winner": "Escher Lefkoff",
-    "points": 62.01,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111652",
-    "matchplayLink": "https://app.matchplay.events/tournaments/240366"
-  },
-  {
     "name": "ACS Strikes (Side Comp)",
     "category": "other",
     "year": 2026,
@@ -537,6 +526,17 @@
     "points": 40.39,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111651",
     "matchplayLink": "https://app.matchplay.events/tournaments/240363"
+  },
+  {
+    "name": "ACS Best Game (Side Comp)",
+    "category": "other",
+    "year": 2026,
+    "date": "2026-03-22",
+    "players": 128,
+    "winner": "Escher Lefkoff",
+    "points": 62.01,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111652",
+    "matchplayLink": "https://app.matchplay.events/tournaments/240366"
   },
   {
     "name": "Target Matchplay (ACS Side Comp). ",
