@@ -1,5 +1,27 @@
 [
   {
+    "name": "Pinawarra 40",
+    "category": "pinawarra",
+    "year": 2026,
+    "date": "2026-09-12",
+    "players": 26,
+    "winner": "Steve Chalki",
+    "points": 28.31,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=112852",
+    "matchplayLink": "https://app.matchplay.events/tournaments/267006"
+  },
+  {
+    "name": "Flip Frenzy 100926",
+    "category": "flipfrenzy",
+    "year": 2026,
+    "date": "2026-09-10",
+    "players": 12,
+    "winner": "Matt Roberts",
+    "points": 3.24,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=116337",
+    "matchplayLink": "https://app.matchplay.events/tournaments/267004"
+  },
+  {
     "name": "Illawarra Frenzy",
     "category": "flipfrenzy",
     "year": 2026,
@@ -462,17 +484,6 @@
     "matchplayLink": ""
   },
   {
-    "name": "Illawarra Masters",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-04-05",
-    "players": 37,
-    "winner": "Andrew Gliatis",
-    "points": 45.69,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=112151",
-    "matchplayLink": "https://app.matchplay.events/tournaments/241455"
-  },
-  {
     "name": "Illawarra Women's Masters",
     "category": "other",
     "year": 2026,
@@ -481,6 +492,17 @@
     "winner": "Pheobe Evans",
     "points": 6.98,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=112152",
+    "matchplayLink": "https://app.matchplay.events/tournaments/241455"
+  },
+  {
+    "name": "Illawarra Masters",
+    "category": "other",
+    "year": 2026,
+    "date": "2026-04-05",
+    "players": 37,
+    "winner": "Andrew Gliatis",
+    "points": 45.69,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=112151",
     "matchplayLink": "https://app.matchplay.events/tournaments/241455"
   },
   {
@@ -539,17 +561,6 @@
     "matchplayLink": "https://app.matchplay.events/tournaments/241443"
   },
   {
-    "name": "ACS Strikes (Side Comp)",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-03-22",
-    "players": 105,
-    "winner": "Peter Menzel",
-    "points": 40.39,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111651",
-    "matchplayLink": "https://app.matchplay.events/tournaments/240363"
-  },
-  {
     "name": "ACS Best Game (Side Comp)",
     "category": "other",
     "year": 2026,
@@ -559,6 +570,17 @@
     "points": 62.01,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111652",
     "matchplayLink": "https://app.matchplay.events/tournaments/240366"
+  },
+  {
+    "name": "ACS Strikes (Side Comp)",
+    "category": "other",
+    "year": 2026,
+    "date": "2026-03-22",
+    "players": 105,
+    "winner": "Peter Menzel",
+    "points": 40.39,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111651",
+    "matchplayLink": "https://app.matchplay.events/tournaments/240363"
   },
   {
     "name": "Target Matchplay (ACS Side Comp). ",
