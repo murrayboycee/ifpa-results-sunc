@@ -1,5 +1,16 @@
 [
   {
+    "name": "Flip Frenzy 240926",
+    "category": "flipfrenzy",
+    "year": 2026,
+    "date": "2026-09-24",
+    "players": 17,
+    "winner": "Ron Lengling",
+    "points": 5.73,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=116336",
+    "matchplayLink": "https://app.matchplay.events/tournaments/273612"
+  },
+  {
     "name": "Illawarra Tuesday League Seas 5 2026",
     "category": "tuesday",
     "year": 2026,
@@ -1320,17 +1331,6 @@
     "matchplayLink": ""
   },
   {
-    "name": "Illawarra Masters Group Matchplay",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-04-20",
-    "players": 38,
-    "winner": "Andrew Gliatis",
-    "points": 41.88,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=94247",
-    "matchplayLink": "https://app.matchplay.events/tournaments/188321"
-  },
-  {
     "name": "Illawarra Masters Card-based Best Game",
     "category": "other",
     "year": 2025,
@@ -1340,6 +1340,17 @@
     "points": 25.87,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=94246",
     "matchplayLink": "https://app.matchplay.events/tournaments/188320"
+  },
+  {
+    "name": "Illawarra Masters Group Matchplay",
+    "category": "other",
+    "year": 2025,
+    "date": "2025-04-20",
+    "players": 38,
+    "winner": "Andrew Gliatis",
+    "points": 41.88,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=94247",
+    "matchplayLink": "https://app.matchplay.events/tournaments/188321"
   },
   {
     "name": "Illawarra Masters Target Matchplay",
