@@ -17,7 +17,7 @@
     "date": "2026-09-15",
     "players": 21,
     "winner": "Ron Lengling",
-    "points": 21.31,
+    "points": 21.3,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=115848",
     "matchplayLink": "https://app.matchplay.events/series/6249"
   },
@@ -110,17 +110,6 @@
     "matchplayLink": "https://app.matchplay.events/tournaments/266210"
   },
   {
-    "name": "IPO Strikes",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-08-09",
-    "players": 45,
-    "winner": "Sue Hantzi",
-    "points": 19.06,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=117759",
-    "matchplayLink": ""
-  },
-  {
     "name": "Illawarra Pinball Open",
     "category": "other",
     "year": 2026,
@@ -132,13 +121,24 @@
     "matchplayLink": "https://app.matchplay.events/tournaments/263673"
   },
   {
+    "name": "IPO Strikes",
+    "category": "other",
+    "year": 2026,
+    "date": "2026-08-09",
+    "players": 45,
+    "winner": "Sue Hantzi",
+    "points": 19.06,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=117759",
+    "matchplayLink": ""
+  },
+  {
     "name": "Pinawarra 39",
     "category": "pinawarra",
     "year": 2026,
     "date": "2026-08-07",
     "players": 61,
     "winner": "Josh Burke",
-    "points": 75.66,
+    "points": 75.64,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=117760",
     "matchplayLink": "https://app.matchplay.events/tournaments/265578"
   },
@@ -517,17 +517,6 @@
     "matchplayLink": ""
   },
   {
-    "name": "Illawarra Masters",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-04-05",
-    "players": 37,
-    "winner": "Andrew Gliatis",
-    "points": 45.69,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=112151",
-    "matchplayLink": "https://app.matchplay.events/tournaments/241455"
-  },
-  {
     "name": "Illawarra Women's Masters",
     "category": "other",
     "year": 2026,
@@ -536,6 +525,17 @@
     "winner": "Pheobe Evans",
     "points": 6.98,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=112152",
+    "matchplayLink": "https://app.matchplay.events/tournaments/241455"
+  },
+  {
+    "name": "Illawarra Masters",
+    "category": "other",
+    "year": 2026,
+    "date": "2026-04-05",
+    "players": 37,
+    "winner": "Andrew Gliatis",
+    "points": 45.69,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=112151",
     "matchplayLink": "https://app.matchplay.events/tournaments/241455"
   },
   {
@@ -594,17 +594,6 @@
     "matchplayLink": "https://app.matchplay.events/tournaments/241443"
   },
   {
-    "name": "ACS Strikes (Side Comp)",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-03-22",
-    "players": 105,
-    "winner": "Peter Menzel",
-    "points": 40.39,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111651",
-    "matchplayLink": "https://app.matchplay.events/tournaments/240363"
-  },
-  {
     "name": "ACS Best Game (Side Comp)",
     "category": "other",
     "year": 2026,
@@ -614,6 +603,17 @@
     "points": 62.01,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111652",
     "matchplayLink": "https://app.matchplay.events/tournaments/240366"
+  },
+  {
+    "name": "ACS Strikes (Side Comp)",
+    "category": "other",
+    "year": 2026,
+    "date": "2026-03-22",
+    "players": 105,
+    "winner": "Peter Menzel",
+    "points": 40.39,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111651",
+    "matchplayLink": "https://app.matchplay.events/tournaments/240363"
   },
   {
     "name": "Target Matchplay (ACS Side Comp). ",
@@ -633,7 +633,7 @@
     "date": "2026-03-20",
     "players": 136,
     "winner": "Escher Lefkoff",
-    "points": 106.79,
+    "points": 106.78,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111573",
     "matchplayLink": "https://app.matchplay.events/tournaments/240359"
   },
@@ -952,7 +952,7 @@
     "date": "2025-12-06",
     "players": 18,
     "winner": "Eric Henderson",
-    "points": 15.57,
+    "points": 15.56,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=92304",
     "matchplayLink": "https://app.matchplay.events/tournaments/224126"
   },
@@ -1331,17 +1331,6 @@
     "matchplayLink": ""
   },
   {
-    "name": "Illawarra Masters Card-based Best Game",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-04-20",
-    "players": 34,
-    "winner": "Paul Jones AUS",
-    "points": 25.87,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=94246",
-    "matchplayLink": "https://app.matchplay.events/tournaments/188320"
-  },
-  {
     "name": "Illawarra Masters Group Matchplay",
     "category": "other",
     "year": 2025,
@@ -1351,6 +1340,17 @@
     "points": 41.88,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=94247",
     "matchplayLink": "https://app.matchplay.events/tournaments/188321"
+  },
+  {
+    "name": "Illawarra Masters Card-based Best Game",
+    "category": "other",
+    "year": 2025,
+    "date": "2025-04-20",
+    "players": 34,
+    "winner": "Paul Jones AUS",
+    "points": 25.87,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=94246",
+    "matchplayLink": "https://app.matchplay.events/tournaments/188320"
   },
   {
     "name": "Illawarra Masters Target Matchplay",
