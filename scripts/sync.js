@@ -4,6 +4,13 @@
 // matches each event to its Match Play tournament (by owner + name/date),
 // and writes events.json for the Squarespace widget to fetch().
 //
+// IMPORTANT (updated): Match Play split their API onto its own subdomain.
+//   API calls now go to:      https://api.matchplay.events
+//   Human-facing website/links still use: https://app.matchplay.events
+// These are now two separate constants below — MATCHPLAY_API_BASE for
+// actual fetch() calls, MATCHPLAY_BASE for building clickable links shown
+// on the site (tournament pages, series pages). Don't merge them back.
+//
 // IFPA field mapping (confirmed from a real API response, 2026-07):
 //   GET /director/{id}/tournaments/PAST?api_key=...
 //     -> { tournaments: [{ tournament_id, tournament_name, event_name,
@@ -28,6 +35,12 @@ const MATCHPLAY_API_TOKEN = process.env.MATCHPLAY_API_TOKEN;
 const DIRECTOR_ID = 2909;
 const MATCHPLAY_OWNER_ID = 25018;
 const IFPA_BASE = "https://api.ifpapinball.com";
+
+// API calls (with the Bearer token) go here — this is the domain that
+// changed.
+const MATCHPLAY_API_BASE = "https://api.matchplay.events";
+// Human-facing website links shown on the site (tournament/series pages)
+// still use this domain — unchanged.
 const MATCHPLAY_BASE = "https://app.matchplay.events";
 
 if (!IFPA_API_KEY) {
@@ -46,7 +59,7 @@ async function ifpaGet(path) {
 }
 
 async function matchplayGet(path) {
-  const res = await fetch(`${MATCHPLAY_BASE}${path}`, {
+  const res = await fetch(`${MATCHPLAY_API_BASE}${path}`, {
     headers: { Authorization: `Bearer ${MATCHPLAY_API_TOKEN}` }
   });
   if (!res.ok) throw new Error(`${path} -> HTTP ${res.status}`);
@@ -153,8 +166,7 @@ function normalizeRomanTokens(toks) {
 }
 
 var MANUAL_MATCHPLAY_OVERRIDES = {
-  "Pinawarra 24": 191785,
-  "Pinawarra 13": 146293
+  "Pinawarra 24": 191785
 };
 
 var ELIMINATION_TYPE_REGEX = /elimination|knockout/i;
