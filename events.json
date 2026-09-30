@@ -1,5 +1,27 @@
 [
   {
+    "name": "Iron Maidens 20",
+    "category": "other",
+    "year": 2026,
+    "date": "2026-09-27",
+    "players": 8,
+    "winner": "",
+    "points": 0,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=114931",
+    "matchplayLink": "https://app.matchplay.events/tournaments/274324"
+  },
+  {
+    "name": "Illawarra Frenzy 2609",
+    "category": "flipfrenzy",
+    "year": 2026,
+    "date": "2026-09-26",
+    "players": 12,
+    "winner": "James Chalki",
+    "points": 0,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=120196",
+    "matchplayLink": ""
+  },
+  {
     "name": "Flip Frenzy 240926",
     "category": "flipfrenzy",
     "year": 2026,
@@ -1331,17 +1353,6 @@
     "matchplayLink": ""
   },
   {
-    "name": "Illawarra Masters Group Matchplay",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-04-20",
-    "players": 38,
-    "winner": "Andrew Gliatis",
-    "points": 41.88,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=94247",
-    "matchplayLink": "https://app.matchplay.events/tournaments/188321"
-  },
-  {
     "name": "Illawarra Masters Card-based Best Game",
     "category": "other",
     "year": 2025,
@@ -1351,6 +1362,17 @@
     "points": 25.87,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=94246",
     "matchplayLink": "https://app.matchplay.events/tournaments/188320"
+  },
+  {
+    "name": "Illawarra Masters Group Matchplay",
+    "category": "other",
+    "year": 2025,
+    "date": "2025-04-20",
+    "players": 38,
+    "winner": "Andrew Gliatis",
+    "points": 41.88,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=94247",
+    "matchplayLink": "https://app.matchplay.events/tournaments/188321"
   },
   {
     "name": "Illawarra Masters Target Matchplay",
