@@ -1353,17 +1353,6 @@
     "matchplayLink": ""
   },
   {
-    "name": "Illawarra Masters Group Matchplay",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-04-20",
-    "players": 38,
-    "winner": "Andrew Gliatis",
-    "points": 41.88,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=94247",
-    "matchplayLink": "https://app.matchplay.events/tournaments/188321"
-  },
-  {
     "name": "Illawarra Masters Card-based Best Game",
     "category": "other",
     "year": 2025,
@@ -1373,6 +1362,17 @@
     "points": 25.87,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=94246",
     "matchplayLink": "https://app.matchplay.events/tournaments/188320"
+  },
+  {
+    "name": "Illawarra Masters Group Matchplay",
+    "category": "other",
+    "year": 2025,
+    "date": "2025-04-20",
+    "players": 38,
+    "winner": "Andrew Gliatis",
+    "points": 41.88,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=94247",
+    "matchplayLink": "https://app.matchplay.events/tournaments/188321"
   },
   {
     "name": "Illawarra Masters Target Matchplay",
