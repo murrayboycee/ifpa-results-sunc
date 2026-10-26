@@ -171,7 +171,7 @@
     "date": "2026-08-09",
     "players": 85,
     "winner": "Pat Nichols",
-    "points": 107.41,
+    "points": 107.37,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=117761",
     "matchplayLink": "https://app.matchplay.events/tournaments/263673"
   },
@@ -182,7 +182,7 @@
     "date": "2026-08-07",
     "players": 61,
     "winner": "Josh Burke",
-    "points": 75.64,
+    "points": 75.6,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=117760",
     "matchplayLink": "https://app.matchplay.events/tournaments/265578"
   },
@@ -369,7 +369,7 @@
     "date": "2026-06-03",
     "players": 22,
     "winner": "Chad Mulheron",
-    "points": 16.61,
+    "points": 16.62,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=113985",
     "matchplayLink": "https://app.matchplay.events/tournaments/250173"
   },
@@ -638,26 +638,26 @@
     "matchplayLink": "https://app.matchplay.events/tournaments/241443"
   },
   {
-    "name": "ACS Best Game (Side Comp)",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-03-22",
-    "players": 128,
-    "winner": "Escher Lefkoff",
-    "points": 62.01,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111652",
-    "matchplayLink": "https://app.matchplay.events/tournaments/240366"
-  },
-  {
     "name": "ACS Strikes (Side Comp)",
     "category": "other",
     "year": 2026,
     "date": "2026-03-22",
     "players": 105,
     "winner": "Peter Menzel",
-    "points": 40.39,
+    "points": 40.38,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111651",
     "matchplayLink": "https://app.matchplay.events/tournaments/240363"
+  },
+  {
+    "name": "ACS Best Game (Side Comp)",
+    "category": "other",
+    "year": 2026,
+    "date": "2026-03-22",
+    "players": 128,
+    "winner": "Escher Lefkoff",
+    "points": 62,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111652",
+    "matchplayLink": "https://app.matchplay.events/tournaments/240366"
   },
   {
     "name": "Target Matchplay (ACS Side Comp). ",
@@ -666,7 +666,7 @@
     "date": "2026-03-21",
     "players": 80,
     "winner": "Josh Burke",
-    "points": 36.32,
+    "points": 36.31,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111653",
     "matchplayLink": "https://app.matchplay.events/tournaments/240363"
   },
@@ -688,7 +688,7 @@
     "date": "2026-03-19",
     "players": 133,
     "winner": "Escher Lefkoff",
-    "points": 34.62,
+    "points": 34.61,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111572",
     "matchplayLink": "https://app.matchplay.events/tournaments/240256"
   },
