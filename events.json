@@ -1,5 +1,16 @@
 [
   {
+    "name": "Iron Maidens 21",
+    "category": "other",
+    "year": 2026,
+    "date": "2026-10-25",
+    "players": 8,
+    "winner": "Sienna Wilson",
+    "points": 2.08,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=114926",
+    "matchplayLink": "https://app.matchplay.events/tournaments/279899"
+  },
+  {
     "name": "Pinawarra 41",
     "category": "pinawarra",
     "year": 2026,
@@ -154,17 +165,6 @@
     "matchplayLink": "https://app.matchplay.events/tournaments/266210"
   },
   {
-    "name": "Illawarra Pinball Open",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-08-09",
-    "players": 85,
-    "winner": "Pat Nichols",
-    "points": 107.37,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=117761",
-    "matchplayLink": "https://app.matchplay.events/tournaments/263673"
-  },
-  {
     "name": "IPO Strikes",
     "category": "other",
     "year": 2026,
@@ -174,6 +174,17 @@
     "points": 19.06,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=117759",
     "matchplayLink": ""
+  },
+  {
+    "name": "Illawarra Pinball Open",
+    "category": "other",
+    "year": 2026,
+    "date": "2026-08-09",
+    "players": 85,
+    "winner": "Pat Nichols",
+    "points": 107.37,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=117761",
+    "matchplayLink": "https://app.matchplay.events/tournaments/263673"
   },
   {
     "name": "Pinawarra 39",
