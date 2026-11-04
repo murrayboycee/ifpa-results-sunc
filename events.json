@@ -1,5 +1,16 @@
 [
   {
+    "name": "Illawarra Monday League Seas 6 2026",
+    "category": "monday",
+    "year": 2026,
+    "date": "2026-11-02",
+    "players": 27,
+    "winner": "Paul Soutter",
+    "points": 31.04,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=120194",
+    "matchplayLink": "https://app.matchplay.events/series/6533"
+  },
+  {
     "name": "Iron Maidens 21",
     "category": "other",
     "year": 2026,
@@ -9,6 +20,17 @@
     "points": 2.08,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=114926",
     "matchplayLink": "https://app.matchplay.events/tournaments/279899"
+  },
+  {
+    "name": "Illawarra Frenzy 221026",
+    "category": "flipfrenzy",
+    "year": 2026,
+    "date": "2026-10-22",
+    "players": 11,
+    "winner": "Ron Lengling",
+    "points": 3.43,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=120053",
+    "matchplayLink": "https://app.matchplay.events/tournaments/278611"
   },
   {
     "name": "Pinawarra 41",
@@ -649,17 +671,6 @@
     "matchplayLink": "https://app.matchplay.events/tournaments/241443"
   },
   {
-    "name": "ACS Strikes (Side Comp)",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-03-22",
-    "players": 105,
-    "winner": "Peter Menzel",
-    "points": 40.38,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111651",
-    "matchplayLink": "https://app.matchplay.events/tournaments/240363"
-  },
-  {
     "name": "ACS Best Game (Side Comp)",
     "category": "other",
     "year": 2026,
@@ -669,6 +680,17 @@
     "points": 62,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111652",
     "matchplayLink": "https://app.matchplay.events/tournaments/240366"
+  },
+  {
+    "name": "ACS Strikes (Side Comp)",
+    "category": "other",
+    "year": 2026,
+    "date": "2026-03-22",
+    "players": 105,
+    "winner": "Peter Menzel",
+    "points": 40.38,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111651",
+    "matchplayLink": "https://app.matchplay.events/tournaments/240363"
   },
   {
     "name": "Target Matchplay (ACS Side Comp). ",
@@ -1386,17 +1408,6 @@
     "matchplayLink": ""
   },
   {
-    "name": "Illawarra Masters Card-based Best Game",
-    "category": "other",
-    "year": 2025,
-    "date": "2025-04-20",
-    "players": 34,
-    "winner": "Paul Jones AUS",
-    "points": 25.87,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=94246",
-    "matchplayLink": "https://app.matchplay.events/tournaments/188320"
-  },
-  {
     "name": "Illawarra Masters Group Matchplay",
     "category": "other",
     "year": 2025,
@@ -1406,6 +1417,17 @@
     "points": 41.88,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=94247",
     "matchplayLink": "https://app.matchplay.events/tournaments/188321"
+  },
+  {
+    "name": "Illawarra Masters Card-based Best Game",
+    "category": "other",
+    "year": 2025,
+    "date": "2025-04-20",
+    "players": 34,
+    "winner": "Paul Jones AUS",
+    "points": 25.87,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=94246",
+    "matchplayLink": "https://app.matchplay.events/tournaments/188320"
   },
   {
     "name": "Illawarra Masters Target Matchplay",
