@@ -435,7 +435,7 @@
     "date": "2026-06-01",
     "players": 23,
     "winner": "Ron Lengling",
-    "points": 22.8,
+    "points": 22.84,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=113983",
     "matchplayLink": "https://app.matchplay.events/series/5818"
   },
@@ -682,17 +682,6 @@
     "matchplayLink": "https://app.matchplay.events/tournaments/241443"
   },
   {
-    "name": "ACS Strikes (Side Comp)",
-    "category": "other",
-    "year": 2026,
-    "date": "2026-03-22",
-    "players": 105,
-    "winner": "Peter Menzel",
-    "points": 40.38,
-    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111651",
-    "matchplayLink": "https://app.matchplay.events/tournaments/240363"
-  },
-  {
     "name": "ACS Best Game (Side Comp)",
     "category": "other",
     "year": 2026,
@@ -702,6 +691,17 @@
     "points": 62,
     "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111652",
     "matchplayLink": "https://app.matchplay.events/tournaments/240366"
+  },
+  {
+    "name": "ACS Strikes (Side Comp)",
+    "category": "other",
+    "year": 2026,
+    "date": "2026-03-22",
+    "players": 105,
+    "winner": "Peter Menzel",
+    "points": 40.38,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=111651",
+    "matchplayLink": "https://app.matchplay.events/tournaments/240363"
   },
   {
     "name": "Target Matchplay (ACS Side Comp). ",
