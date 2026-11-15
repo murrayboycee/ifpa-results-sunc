@@ -1,5 +1,27 @@
 [
   {
+    "name": "Pinawarra 42",
+    "category": "pinawarra",
+    "year": 2026,
+    "date": "2026-11-14",
+    "players": 26,
+    "winner": "Paul Jones AUS",
+    "points": 27.56,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=112854",
+    "matchplayLink": "https://app.matchplay.events/tournaments/281320"
+  },
+  {
+    "name": "Illawarra Frenzy 0511",
+    "category": "flipfrenzy",
+    "year": 2026,
+    "date": "2026-11-05",
+    "players": 17,
+    "winner": "Paul Jones AUS",
+    "points": 5.94,
+    "ifpaLink": "https://www.ifpapinball.com/tournaments/view.php?t=121457",
+    "matchplayLink": ""
+  },
+  {
     "name": " Illawarra Tuesday League Seas 6 2026",
     "category": "tuesday",
     "year": 2026,
